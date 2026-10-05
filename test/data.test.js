@@ -20,9 +20,9 @@ test('An absent option remains absent rather than becoming zero',()=>{
  const seg=segments(ws,'Виведення ЗСУ з Донбасу');assert.equal(seg.length,1);assert.equal(seg[0].length,1);assert.equal(seg[0][0].pct,.037);
  const synthetic=waves([{poll:'a',sort:'2024-01',answer:'x',pct:.2},{poll:'b',sort:'2024-02',answer:'y',pct:.4},{poll:'c',sort:'2024-03',answer:'x',pct:.3}]);assert.equal(segments(synthetic,'x').length,2);
 });
-test('Method boundary interrupts the IRI line without dropping values',()=>{
+test('IRI connects all published waves without dropping values',()=>{
  const ws=waves(d.dynamics.filter(r=>r.series==='IRI_PEACE_REFERENDUM'));
- const seg=segments(ws,'Однозначно підтримую',['2026-06']);assert.deepEqual(seg.map(s=>s.length),[2,1]);assert.equal(seg.at(-1)[0].pct,.27);
+ const seg=segments(ws,'Однозначно підтримую');assert.deepEqual(seg.map(s=>s.length),[3]);assert.equal(seg[0].at(-1).pct,.27);
 });
 test('NDI keeps published aggregates instead of sums of rounded bins',()=>{
  const rs=d.dynamics.filter(r=>r.series.startsWith('NDI_PEACE_PRICE_')&&r.sort==='2026-03');assert.equal(rs.length,2);assert(rs.every(r=>r.pct===.7));

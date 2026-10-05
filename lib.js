@@ -7,10 +7,9 @@ export function timeValue(key){
 }
 export function waves(rows){return unique(rows.map(r=>r.sort+'|'+r.poll)).map(key=>{const rs=rows.filter(r=>r.sort+'|'+r.poll===key);return {key,sort:rs[0].sort,poll:rs[0].poll,rows:rs,time:timeValue(rs[0].sort)}}).sort((a,b)=>a.time-b.time||a.key.localeCompare(b.key));}
 // A missing answer must break the path. It is never imputed as zero.
-export function segments(ws,answer,breaks=[]){
+export function segments(ws,answer){
   const out=[];let current=[];
   for(let i=0;i<ws.length;i++){
-    if(i&&breaks.some(b=>ws[i-1].time<timeValue(b)&&ws[i].time>=timeValue(b))){if(current.length)out.push(current);current=[];}
     const row=ws[i].rows.find(r=>r.answer===answer);
     if(row)current.push({...row,time:ws[i].time});else{if(current.length)out.push(current);current=[];}
   }
