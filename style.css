@@ -7,3 +7,5 @@
 @media(max-width:700px){.chart-svg{min-width:700px}}
 
 .chart-passport th:first-child{width:20%}.chart-passport th:last-child{width:22%}.chart-passport td:first-child{min-width:115px}
+
+.intro h1{font-size:clamp(32px,3vw,46px);letter-spacing:-.8px}.intro-side>p:first-child{font-family:var(--sans);font-size:17px;line-height:1.5}

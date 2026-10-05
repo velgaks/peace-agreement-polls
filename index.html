@@ -2,18 +2,18 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Переговори та умови миру · Україна</title>
-  <meta name="description" content="Динаміка ставлення українців до переговорів та умов миру. Опитування з 2022 року, першоджерела, формулювання та перехресні таблиці.">
+  <title>Опитування про переговори та мирні ініціативи</title>
+  <meta name="description" content="Зібрані опитування українців про підтримку переговорів, мирні ініціативи, прийнятні умови та поступки. Дані від 2022 року з посиланнями на джерела.">
   <meta name="theme-color" content="#fcfcfb">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=7cd80af">
+  <link rel="stylesheet" href="style.css?v=plain-title-1">
   <script type="module" src="app.js?v=7cd80af"></script>
 </head>
 <body>
   <a class="skip" href="#content">Перейти до даних</a>
-  <header class="masthead"><a class="brand" href="#trends"><span class="brand-mark" aria-hidden="true">∿</span> СОЦІОЛОГІЯ МИРУ</a><div><span id="updated">Зріз даних: 05.10.2026</span><a href="https://github.com/velgaks/peace-agreement-polls" target="_blank" rel="noopener">GitHub ↗</a></div></header>
+  <header class="masthead"><a class="brand" href="#trends">КАТАЛОГ ОПИТУВАНЬ</a><div><span id="updated">Зріз даних: 05.10.2026</span><a href="https://github.com/velgaks/peace-agreement-polls" target="_blank" rel="noopener">GitHub ↗</a></div></header>
   <main id="content">
-    <div class="intro"><div><p class="eyebrow">УКРАЇНА / ВІД 2022 РОКУ</p><h1>Переговори.<br>Умови. <em>Межі згоди.</em></h1></div><div class="intro-side"><p>Як змінюється ставлення до миру, коли запитують про його ціну.</p><p class="muted">Часові ряди, конкретні вимоги й опубліковані перетини відповідей. Кожне число можна перевірити.</p><div id="stats" class="stats"></div></div></div>
+    <div class="intro"><div><p class="eyebrow">УКРАЇНА / ВІД 2022 РОКУ</p><h1>Опитування про переговори та мирні ініціативи</h1></div><div class="intro-side"><p>Зібрані опитування українців про підтримку переговорів, мирні ініціативи, прийнятні умови та поступки.</p><p class="muted">Графіки динаміки, питання та посилання на першоджерела.</p><div id="stats" class="stats"></div></div></div>
     <nav class="nav" aria-label="Розділи дослідження">
       <a href="#trends" data-view="trends">01 <span>Динаміка</span></a><a href="#conditions" data-view="conditions">02 <span>Умови миру</span></a><a href="#crosses" data-view="crosses">03 <span>Перетини</span></a><a href="#groups" data-view="groups">04 <span>Робочі групи</span></a><a href="#catalog" data-view="catalog">05 <span>Каталог</span></a><a href="#methods" data-view="methods">06 <span>Метод</span></a>
     </nav>
@@ -25,7 +25,7 @@
     <section id="view-catalog" hidden aria-label="Каталог опитувань"><div class="section-head"><div><h2>Каталог досліджень</h2><p>Хвилі, ретроспективні точки та агрегати. Один запис не завжди дорівнює незалежній вибірці.</p></div><button id="catalog-csv">Завантажити CSV ↓</button></div><div class="filters"><label>Пошук<input id="catalog-search" type="search" placeholder="Організація, тема, рік…"></label><label>Рік<select id="year-filter"></select></label><label>Пріоритет<select id="priority-filter"><option value="all">Усі джерела</option><option value="main">Основні</option><option value="extra">Додаткові / неперевірені</option></select></label></div><p id="catalog-count" class="small muted" role="status"></p><div id="catalog-list"></div></section>
     <section id="view-methods" hidden aria-label="Методологія"><div class="section-head"><h2>Як читати ці дані</h2><a class="button" href="data/research.json" download>Повна база JSON ↓</a></div><div class="method-grid"><article><h3>Одиниця порівняння</h3><p>Окремий ряд поєднує відповіді на конкретне питання одного дослідницького проєкту. Підтримка переговорів, прогноз завершення війни та прийнятність поступок вимірюють різні речі.</p><h3>Дата на графіку</h3><p>Точки розміщені за ключем часу першоджерела: днем, місяцем або роком. Якщо відомий лише місяць чи рік, використано його середину для розташування на осі. Точні дати поля, коли вони встановлені, показано в таблиці. Лінії лише з’єднують заміри.</p><h3>Зміни питань</h3><p>Зміни формулювань, переліку відповідей, вибірки та зважування описані у примітках під графіками й у завантажених SVG. Нової опції немає в попередній хвилі: це пропуск, а не нуль. Суттєво різні сценарії розділені. Лінії з’єднують наявні значення категорії, зокрема через зміни методики; це не означає повної зіставності хвиль.</p></article><article><h3>Пріоритет джерел</h3><p>Основу становлять КМІС, Разумков, ФДІ, «Рейтинг», Info Sapiens та міжнародні проєкти з указаним виконавцем. Онлайн-панелі й недостатньо документовані опитування позначені окремо. Пріоритет не є універсальним рейтингом доброчесності організації.</p><h3>База відповіді</h3><p>Зберігаємо опубліковані округлення, невизначені відповіді та пояснення знаменника. Множинний вибір може давати понад 100%. Не домислюємо пропущені категорії як залишок до 100%.</p><h3>Межі охоплення</h3><p>Воєнні опитування по-різному охоплюють окуповані території, ВПО та українців за кордоном. Це бібліотека доступних публікацій, а не перепис усіх проведених досліджень.</p></article></div><h3>Що перевірено</h3><div id="coverage-list"></div><div class="downloads"><a href="data/dynamics.csv" download>Уся динаміка CSV ↓</a><a href="data/crosses.csv" download>Усі перетини CSV ↓</a><a href="data/questions.csv" download>Усі питання CSV ↓</a></div></section>
   </main>
-  <footer><span>Valentyn Hatsko · <a href="https://t.me/gorbach_squad">@gorbach_squad</a></span><span>Відкрита дослідницька збірка · MVP 0.1 · <a href="https://github.com/velgaks/peace-agreement-polls/issues">Повідомити про помилку ↗</a></span></footer>
+  <footer><span>Valentyn Hatsko · <a href="https://t.me/gorbach_squad">@gorbach_squad</a></span><span>Добірка опитувань · MVP 0.1 · <a href="https://github.com/velgaks/peace-agreement-polls/issues">Повідомити про помилку ↗</a></span></footer>
   <noscript>Для інтерактивних графіків увімкніть JavaScript. <a href="data/dynamics.csv">Динаміку можна завантажити як CSV.</a></noscript>
 </body>
 </html>
