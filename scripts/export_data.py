@@ -34,6 +34,10 @@ for name in ['polls','questions','dynamics','crosses']:
                 value=w.get(key,'')
                 r['wording_'+key]=json.dumps(value,ensure_ascii=False) if isinstance(value,(list,dict)) else value
     fields=list(dict.fromkeys(k for r in rows for k in r))
+    if name=='questions':
+        # Put source wording in view before summaries and internal metadata.
+        first=['id','poll','wording_question','wording_prompt','wording_options','wording_source_url','wording_basis']
+        fields=first+[key for key in fields if key not in first]
     with (root/f'data/{name}.csv').open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)
 print('Exported', {k:len(data[k]) for k in ['polls','questions','dynamics','crosses','sources']})
