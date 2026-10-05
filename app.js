@@ -6,7 +6,7 @@ const COLORS=['#2a78d6','#eb6834','#52514e','#0d366b','#898781','#86b6ef'];
 const DASH=['','7 3','2 3','10 3 2 3','4 4','1 3'];
 const TEXT={uk:{credit:'Графік: Valentyn Hatsko, TG: @gorbach_squad.',repo:'Дані, код і метод: github.com/velgaks/peace-agreement-polls',retrieved:'джерела зібрано у жовтні 2026'}};
 const T=TEXT.uk;
-let data,source,polls,wording,wordingIndex,selected=SERIES[0].id,currentRows=[],catalogRows=[],crossRows=[];
+let data,source,polls,wording,wordingIndex,selected=SERIES[0].id,currentRows=[],catalogRows=[];
 function sourceLink(id,label='Джерело ↗'){
  const url=source[id]?.url;return url&&/^https?:\/\//.test(url)?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`:'';
 }
@@ -94,24 +94,13 @@ function renderCatalog(){
  $('catalog-count').textContent=`Показано ${catalogRows.length} із ${data.polls.length} записів. Це не кількість незалежних вибірок.`;
  $('catalog-list').innerHTML=catalogRows.map(p=>`<article class="record"><div class="record-side"><strong>${esc(p.id)} · ${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(p.priority)}</span></div><div><h3>${esc(p.title)}</h3><p class="small muted">${esc(p.commissioner)} · n = ${esc(p.n||'не встановлено')} · ${esc(p.method||'не встановлено')}</p><details class="detail"><summary>Паспорт і межі інтерпретації</summary><dl><dt>Публікація</dt><dd>${esc(p.published||'Дату не встановлено')}</dd><dt>Охоплення</dt><dd>${esc(p.population||'Не встановлено')}</dd><dt>Обмеження</dt><dd>${esc(p.limits)}</dd><dt>Перевірка</dt><dd>${esc(p.check)}</dd></dl></details><div class="record-links">${sourceLink(p.source,'Публікація ↗')}${p.report?sourceLink(p.report,'Повний звіт ↗'):''}<a href="#conditions?poll=${p.id}">Питання цієї хвилі</a></div></div></article>`).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
 }
-function renderCross(){
- const key=$('cross-select').value;crossRows=data.crosses.filter(r=>r.poll+'¦'+r.question===key);
- if(!crossRows.length){$('cross-content').innerHTML='<p class="empty">Немає перетинів.</p>';return;}
- const first=crossRows[0],p=polls[first.poll],answers=unique(crossRows.map(r=>r.answer));
- $('cross-content').innerHTML=`<p class="muted">${esc(p.pollster)} · ${esc(p.commissioner)} · ${esc(p.period)} · <a href="#catalog?poll=${p.id}">Паспорт ${p.id}</a></p><div class="notice">${unique(crossRows.map(r=>r.note)).map(esc).join(' ')}</div>${unique(crossRows.map(r=>r.group)).map(group=>{const rows=crossRows.filter(r=>r.group===group);return `<div class="cross-row"><div><h3>${esc(group)}</h3><p class="small muted">${esc(rows[0].base)}</p></div><div class="cross-bars">${rows.map(r=>`<div class="bar-row"><span>${esc(r.answer)}</span><span class="bar" aria-hidden="true"><i style="width:${r.pct*100}%;background:${COLORS[answers.indexOf(r.answer)]}"></i></span><span class="bar-value">${pct(r.pct)}</span></div>`).join('')}</div></div>`;}).join('')}<div class="chart-credit">Кожен ряд використовує знаменник своєї підгрупи; ненаведені категорії не відновлено.<br><strong>${T.credit}</strong> ${sourceLink(first.source,first.location+' ↗')} · ${esc(p.pollster)}, ${esc(p.period)}.<br>${T.repo}</div><details class="detail"><summary>Точні значення та джерела</summary><div class="table-wrap"><table><thead><tr><th>Підгрупа</th><th>Відповідь</th><th class="num">Частка</th><th>Знаменник</th><th>Джерело</th></tr></thead><tbody>${crossRows.map(r=>`<tr><td>${esc(r.group)}</td><td>${esc(r.answer)}</td><td class="num">${pct(r.pct)}</td><td>${esc(r.base)}</td><td>${sourceLink(r.source,r.location)}</td></tr>`).join('')}</tbody></table></div></details>`;
-}
-function renderGroups(){
- const refs=[['C24P'],['D24C','D23P'],['K1615'],['K2'],['K1634'],['K1594']];
- $('group-list').innerHTML=data.groups.map((g,i)=>`<article class="group"><span class="group-number">0${i+1}</span><div><h3>${esc(g.name)}</h3><p>${esc(g.rule)}</p><p><strong>Підстава.</strong> ${esc(g.evidence)}</p><p class="small">${refs[i].map(id=>sourceLink(id,'Першоджерело ↗')).join(' · ')}</p></div><div class="group-aside"><strong>${esc(g.share)}</strong><p>${esc(g.gap)}</p></div></article>`).join('');
-}
 function route(){
- const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','crosses','groups','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
+ const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
  document.querySelectorAll('section[id^="view-"]').forEach(s=>s.hidden=s.id!=='view-'+view);
  document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  if(view==='trends'){if(SERIES.some(s=>s.id===params.get('series')))selected=params.get('series');renderSeriesList();renderTrend();}
  if(view==='conditions'){if(params.has('poll')){$('question-search').value=params.get('poll');$('question-priority').value='all';$('dimension-filter').value='';}renderQuestions();}
  if(view==='catalog'){if(params.has('poll')){$('catalog-search').value=params.get('poll');$('year-filter').value='';$('priority-filter').value='all';}renderCatalog();}
- if(view==='crosses')renderCross();
 }
 async function init(){
  try{
@@ -120,15 +109,12 @@ async function init(){
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
   $('dimension-filter').innerHTML=option('','Усі виміри')+unique(data.questions.map(q=>q.dimension)).sort((a,b)=>a.localeCompare(b,'uk')).map(d=>option(d,d)).join('');
   $('year-filter').innerHTML=option('','Усі роки')+['2026','2025','2024','2023','2022'].map(y=>option(y,y)).join('');
-  const keys=unique(data.crosses.map(r=>r.poll+'¦'+r.question));
-  $('cross-select').innerHTML=keys.map(key=>{const [id,q]=key.split('¦'),p=polls[id];return option(key,`${p.pollster} · ${p.period} · ${q}`);}).join('');
-  $('cross-select').value=keys.find(k=>k.startsWith('P40¦'))||keys[0];
   $('coverage-list').innerHTML=data.coverage.map(r=>`<details class="detail"><summary>${esc(r[0])} · ${esc(r[1])}</summary><div class="detail-body"><p>${esc(r[2])}</p><p>${esc(r[3])}</p><p>${esc(r[4])}</p></div></details>`).join('');
-  renderGroups();route();$('status').textContent='';
+  route();$('status').textContent='';
   $('series-search').oninput=renderSeriesList;
   ['question-search','dimension-filter','question-priority'].forEach(id=>$(id).addEventListener(id.includes('search')?'input':'change',renderQuestions));
   ['catalog-search','year-filter','priority-filter'].forEach(id=>$(id).addEventListener(id.includes('search')?'input':'change',renderCatalog));
-  $('cross-select').onchange=renderCross;$('cross-csv').onclick=()=>download('cross-table.csv',csv(withURLs(crossRows)));$('catalog-csv').onclick=()=>download('poll-catalog.csv',csv(withURLs(catalogRows)));
+  $('catalog-csv').onclick=()=>download('poll-catalog.csv',csv(withURLs(catalogRows)));
   window.addEventListener('hashchange',route);
  }catch(error){$('status').innerHTML='Не вдалося завантажити дані. Спробуйте оновити сторінку або <a href="data/dynamics.csv">завантажте CSV</a>.';console.error(error);}
 }
