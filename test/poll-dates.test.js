@@ -18,7 +18,7 @@ function day(value,end=false){
 }
 
 test('All fieldwork periods preserve source precision and have an audit trail',()=>{
- assert.equal(data.polls.length,117);
+ assert.equal(data.polls.length,118);
  for(const p of data.polls){
   assert(p.fieldwork_periods.length>0,p.id);
   let previous=-Infinity;

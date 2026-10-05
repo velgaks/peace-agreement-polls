@@ -32,7 +32,14 @@ test('Bounded means, experimental marginals and subgroup percentages are not mix
  assert.match(more.questions.Q23.plots[0].caption,/Лише серед/);
  assert.match(more.questions.Q109.plots[0].caption,/переказ/);
  assert.equal(more.questions.Q13.plots[0].rows[0].value,55);
- assert.equal(data.dynamics.find(r=>r.series==='NDI_PEACE_PRICE_TERRITORY_REJECT'&&r.poll==='P10').pct,.7);
+ assert.equal(data.dynamics.find(r=>r.series==='NDI_PEACE_PRICE_TERRITORY_REJECT'&&r.poll==='P10'&&r.answer==='Повністю не приймаю').pct,.55);
+});
+
+test('Scenario charts retain the complete Info Sapiens and NDI distributions',()=>{
+ assert.equal(more.questions.Q114.plots.length,3);
+ assert.deepEqual(more.questions.Q114.plots.map(p=>p.rows.map(r=>r.value)),[[82,11,7],[80,13,7],[45,37,18]]);
+ assert.deepEqual(more.questions.Q137.plots[0].rows.map(r=>r.value),[58,12,9,5,15]);
+ assert.deepEqual(more.questions.Q138.plots[0].rows.map(r=>r.value),[59,13,8,6,14]);
 });
 test('Chart labels and source strings are HTML escaped',()=>{
  const html=questionChartsHTML('Q', {series:[],plots:[{rows:[{label:'<script>alert(1)</script>',value:5}],unit:'percent',heading:'<bad>',caption:'a&b',source_url:'https://example.com/?q="test"',location:'<page>'}]},{pollster:'<name>',period:'2026'});

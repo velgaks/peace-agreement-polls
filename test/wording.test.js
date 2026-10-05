@@ -48,11 +48,12 @@ test('Every catalogue record is audited; unavailable instruments are never fabri
  }
  assert.deepEqual(missing,wording.review.missing_full_wording);
 });
-test('NDI retrospective records retain their own wave and only published scale fragments',()=>{
+test('NDI 2025 and 2026 retain separate primary reports and full scales',()=>{
  for(const [current,old] of [['Q13','Q137'],['Q14','Q138']]){
   const a=index.byQuestion.get(current),b=index.byQuestion.get(old);
   assert.notEqual(a.id,b.id);assert.deepEqual(a.polls,['P10']);assert.deepEqual(b.polls,['P117']);
-  assert.equal(a.options.length,5);assert.equal(b.basis,'retrospective');assert.equal(b.options.length,0);assert.equal(b.partial_options.length,2);
+  assert.equal(a.options.length,5);assert.equal(b.basis,'report');assert.equal(b.options.length,5);
+  assert.match(b.source_url,/NDI-August-2025/);assert.notEqual(a.source_url,b.source_url);assert.equal(b.partial_options,undefined);
  }
 });
 test('Batteries and bundled catalogue entries retain distinct statements and scales',()=>{

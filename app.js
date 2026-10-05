@@ -57,7 +57,8 @@ function chartSVG(meta,rs){
  let svg=`<svg id="trend-chart" class="chart-svg" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">${esc(meta.title)}</title><desc id="svg-desc">${esc(questionText(wordingFor(meta.id,ws.at(-1).poll)))} ${esc(meta.note)} Точні значення доступні на точках графіка та у CSV.</desc><g font-family="Source Sans 3, sans-serif" font-size="12" fill="#52514e">`;
  for(let v=0;v<=1.001;v+=.25){svg+=`<line x1="${left}" x2="${right}" y1="${y(v)}" y2="${y(v)}" stroke="#e1e0d9" stroke-width=".7"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`;}
  const span=max-min;
- const fmt=new Intl.DateTimeFormat('uk-UA',{month:'short',year:'numeric',timeZone:'UTC'});
+ const sameMonth=unique(ws.map(w=>w.sort.slice(0,7))).length===1&&ws.every(w=>w.sort.length===10);
+ const fmt=new Intl.DateTimeFormat('uk-UA',{...(sameMonth?{day:'numeric'}:{}),month:'short',year:'numeric',timeZone:'UTC'});
  const ticks=span>864e5*730?unique(ws.map(w=>new Date(w.time).getUTCFullYear())).map(yr=>({t:Math.max(min,Math.min(max,Date.UTC(yr,0,1))),label:String(yr)})):ws.map(w=>({t:w.time,label:fmt.format(w.time)}));
  // Two January waves retain separate points; axis labels need not repeat the month.
  let lastX=-Infinity;

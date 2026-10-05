@@ -24,8 +24,20 @@ test('IRI connects all published waves without dropping values',()=>{
  const ws=waves(d.dynamics.filter(r=>r.series==='IRI_PEACE_REFERENDUM'));
  const seg=segments(ws,'Однозначно підтримую');assert.deepEqual(seg.map(s=>s.length),[3]);assert.equal(seg[0].at(-1).pct,.27);
 });
-test('NDI keeps published aggregates instead of sums of rounded bins',()=>{
- const rs=d.dynamics.filter(r=>r.series.startsWith('NDI_PEACE_PRICE_')&&r.sort==='2026-03');assert.equal(rs.length,2);assert(rs.every(r=>r.pct===.7));
+test('NDI displays all five published bins and retains aggregate rounding in notes',()=>{
+ for(const [id,values] of [['NDI_PEACE_PRICE_TERRITORY_REJECT',[.55,.14,.1,.04,.16]],['NDI_PEACE_PRICE_LANGUAGE_REJECT',[.54,.15,.11,.07,.13]]]){
+  const rs=d.dynamics.filter(r=>r.series===id&&r.sort==='2026-03');
+  assert.deepEqual(rs.map(r=>r.pct),values);assert(rs.every(r=>/70%.*69%/.test(r.note)));
+ }
+});
+
+test('Info Sapiens includes all three response categories and all March waves',()=>{
+ const rs=d.dynamics.filter(r=>r.series==='SAPIENS_NATO_BAN_2022');
+ assert.equal(rs.length,9);
+ for(const [poll,values] of [['P118',[.56,.30,.14]],['P89',[.51,.33,.16]],['P88',[.45,.37,.18]]]){
+  assert.deepEqual(rs.filter(r=>r.poll===poll).map(r=>r.pct),values);
+ }
+ assert.deepEqual(segments(waves(rs),'Готові прийняти заборону НАТО').map(s=>s.length),[3]);
 });
 test('CSV preserves decimals, quotes and multiline notes; times use UTC',()=>{
  assert(csv([{answer:'a,"b"',pct:.037,note:'one\ntwo'}]).includes('"a,""b"""'));
