@@ -1,0 +1,5291 @@
+{
+  "series": [
+    {
+      "id": "DIF_COMPROMISE_GENERAL",
+      "name": "Компроміси заради миру",
+      "org": "ФДІ / Центр Разумкова",
+      "title": "У грудні 2022 року 61,8% пов’язували припинення війни лише з перемогою",
+      "question": "Компроміси заради миру",
+      "note": "Дві хвилі 2022 року. Один варіант відповіді; питання не називає конкретних поступок.",
+      "caption": "Дві хвилі 2022 року."
+    },
+    {
+      "id": "RAZUMKOV_WHEN_TALKS",
+      "name": "Коли вести переговори",
+      "org": "Центр Разумкова",
+      "title": "Згода з переговорами «вже зараз» зросла з 16,6% до 35,2%",
+      "question": "Коли вести переговори",
+      "note": "Кожне твердження оцінювали окремо. Показано лише відповідь «Так»; сума ліній не є розподілом населення.",
+      "caption": "Кожне твердження оцінювали окремо."
+    },
+    {
+      "id": "SOCIS_CONCESSIONS_MULTI",
+      "name": "Які поступки допускають",
+      "org": "SOCIS",
+      "title": "У жовтні 2025 року 31,6% обрали «ЖОДНИХ ПОСТУПОК»",
+      "question": "Які поступки допускають",
+      "note": "Множинний вибір. Опція «ЖОДНИХ ПОСТУПОК» відсутня в перших двох точках таблиці; це не нуль.",
+      "caption": "Множинний вибір."
+    },
+    {
+      "id": "IRI_CONCESSIONS_2022",
+      "name": "Прийнятні поступки у 2022 році",
+      "org": "IRI / Рейтинг",
+      "title": "Нейтралітет і відмову від НАТО допускали 37% у квітні та 29% у червні 2022",
+      "question": "Прийнятні поступки у 2022 році",
+      "note": "Множинний вибір; сума може перевищувати 100%. Дослівні опції наведено англійською, мовою звіту.",
+      "caption": "Множинний вибір; сума може перевищувати 100%."
+    },
+    {
+      "id": "SAPIENS_NATO_BAN_2022",
+      "name": "Неприйняття заборони вступу до НАТО",
+      "org": "Info Sapiens",
+      "title": "У березні 2022 року заборону вступу до НАТО відкидали 51% і 45%",
+      "question": "Неприйняття заборони вступу до НАТО",
+      "note": "Показано лише неприйняття одного сценарію. Умова питання — гарантія негайного припинення війни.",
+      "caption": "Показано лише неприйняття одного сценарію."
+    },
+    {
+      "id": "ISPP_VICTORY",
+      "name": "Повернення до лінії 24.02.2022 як перемога",
+      "org": "ІСПП НАПН України",
+      "title": "Згода з поверненням до лінії 24.02.2022 та подальшими переговорами зросла до 59,2%",
+      "question": "Повернення до лінії 24.02.2022 як перемога",
+      "note": "Показано згоду та незгоду. Невизначені й ті, хто не відповів, не включені до цих двох ліній.",
+      "caption": "Показано згоду та незгоду."
+    },
+    {
+      "id": "ISPP_PEACE_PRICE",
+      "name": "Мир, але не будь-якою ціною",
+      "org": "ІСПП НАПН України",
+      "title": "У 2025 році 76,3% погодилися: «Україні потрібен мир, але не будь-якою ціною»",
+      "question": "Мир, але не будь-якою ціною",
+      "note": "Показано згоду та незгоду. Невизначені й ті, хто не відповів, не включені до цих двох ліній.",
+      "caption": "Показано згоду та незгоду."
+    },
+    {
+      "id": "ISPP_SHAME_WAR",
+      "name": "«Маленька ганьба» чи велика війна",
+      "org": "ІСПП НАПН України",
+      "title": "Згода із судженням «Краще маленька ганьба, ніж велика війна» зросла до 37%",
+      "question": "«Маленька ганьба» чи велика війна",
+      "note": "Показано згоду та незгоду. Невизначені й ті, хто не відповів, не включені до цих двох ліній.",
+      "caption": "Показано згоду та незгоду."
+    },
+    {
+      "id": "ISPP_PEACE_OPTIONS_2023_24",
+      "name": "Прийнятна умова миру: 2023–2024",
+      "org": "ІСПП НАПН України",
+      "title": "Вимогу повної капітуляції Росії обирали 42% у 2023 та 31,9% у 2024",
+      "question": "Прийнятна умова миру: 2023–2024",
+      "note": "Показано п’ять змістовних категорій; «інше» та невизначені в цьому ряді не наведені. Версія 2025 року має інший перелік опцій і показана окремо.",
+      "caption": "Показано п’ять змістовних категорій; «інше» та невизначені в цьому ряді не наведені."
+    },
+    {
+      "id": "NDI_PEACE_PRICE_TERRITORY_REJECT",
+      "name": "Неприйняття визнання територій Росії",
+      "org": "NDI / КМІС",
+      "title": "Умову відкидають 70% в обох хвилях",
+      "question": "Неприйняття визнання територій Росії",
+      "note": "Авторські агрегати неприйняття; не сума округлених сегментів. У серпні 2025 повної шкали у звіті немає.",
+      "caption": "Авторські агрегати неприйняття; не сума округлених сегментів."
+    },
+    {
+      "id": "NDI_PEACE_PRICE_LANGUAGE_REJECT",
+      "name": "Неприйняття офіційного статусу російської",
+      "org": "NDI / КМІС",
+      "title": "Умову відкидають 72% у 2025 та 70% у 2026",
+      "question": "Неприйняття офіційного статусу російської",
+      "note": "Авторські агрегати неприйняття; не сума округлених сегментів. У серпні 2025 повної шкали у звіті немає.",
+      "caption": "Авторські агрегати неприйняття; не сума округлених сегментів."
+    }
+  ],
+  "wording": [
+    {
+      "question": "На Вашу думку, чи варто йти на компроміси із Росією заради припинення війни?",
+      "prompt": "",
+      "options": [
+        "Заради миру варто йти на будь-які компроміси",
+        "Можна йти на компроміси, але не на всі",
+        "Війна може припинитися лише у разі перемоги",
+        "Важко сказати/Відмова"
+      ],
+      "instructions": "(у %; один варіант відповіді)",
+      "source_url": "https://dif.org.ua/uploads/pdf/20263161126458f92b642fb0.79054584.pdf",
+      "location": "PDF, с. 23, 24",
+      "basis": "retrospective",
+      "note": "",
+      "language": "uk",
+      "id": "chart-DIF_COMPROMISE_GENERAL-P113",
+      "series": "DIF_COMPROMISE_GENERAL",
+      "polls": [
+        "P113",
+        "P37"
+      ],
+      "question_ids": [],
+      "mapping": {
+        "Будь-які компроміси заради миру": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Компроміси, але не всі": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Припинення війни лише після перемоги": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Важко відповісти / відмова": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "chart-RAZUMKOV_WHEN_TALKS-P65",
+      "series": "RAZUMKOV_WHEN_TALKS",
+      "polls": [
+        "P65"
+      ],
+      "question": "Існують різні думки щодо переговорів з росією. З ЯКИМ ІЗ ЦИХ ТВЕРДЖЕНЬ ВИ ЗГОДНІ БІЛЬШОЮ МІРОЮ?",
+      "prompt": "",
+      "options": [
+        "Так",
+        "Ні",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згода: зараз це ефективний шлях": {
+          "kind": "statement",
+          "statement_index": 0,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після повернення до лінії 23.02.2022": {
+          "kind": "statement",
+          "statement_index": 1,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після відновлення кордонів 1991": {
+          "kind": "statement",
+          "statement_index": 2,
+          "indices": [
+            0
+          ]
+        }
+      },
+      "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+      "location": "PDF, с. 21",
+      "basis": "retrospective",
+      "note": "Кожне з трьох тверджень оцінюється окремо за шкалою Так / Ні / Важко відповісти. Повний перелік тверджень збережений у полі statements. Формулювання з ретроспективної таблиці вересня 2024; окремі старі анкети не опубліковані в цьому звіті.",
+      "language": "uk",
+      "evidence_sha256": "54dd95ef9157f6cac96dfbcfe7f9fd97f92b736faf57c8d83d307a0d97156bdc",
+      "question_ids": [],
+      "statements": [
+        "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз",
+        "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р.",
+        "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р."
+      ],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-RAZUMKOV_WHEN_TALKS-P66",
+      "series": "RAZUMKOV_WHEN_TALKS",
+      "polls": [
+        "P66"
+      ],
+      "question": "Існують різні думки щодо переговорів з росією. З ЯКИМ ІЗ ЦИХ ТВЕРДЖЕНЬ ВИ ЗГОДНІ БІЛЬШОЮ МІРОЮ?",
+      "prompt": "",
+      "options": [
+        "Так",
+        "Ні",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згода: зараз це ефективний шлях": {
+          "kind": "statement",
+          "statement_index": 0,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після повернення до лінії 23.02.2022": {
+          "kind": "statement",
+          "statement_index": 1,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після відновлення кордонів 1991": {
+          "kind": "statement",
+          "statement_index": 2,
+          "indices": [
+            0
+          ]
+        }
+      },
+      "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+      "location": "PDF, с. 21",
+      "basis": "retrospective",
+      "note": "Кожне з трьох тверджень оцінюється окремо за шкалою Так / Ні / Важко відповісти. Повний перелік тверджень збережений у полі statements. Формулювання з ретроспективної таблиці вересня 2024; окремі старі анкети не опубліковані в цьому звіті.",
+      "language": "uk",
+      "evidence_sha256": "54dd95ef9157f6cac96dfbcfe7f9fd97f92b736faf57c8d83d307a0d97156bdc",
+      "question_ids": [],
+      "statements": [
+        "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз",
+        "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р.",
+        "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р."
+      ],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-RAZUMKOV_WHEN_TALKS-P67",
+      "series": "RAZUMKOV_WHEN_TALKS",
+      "polls": [
+        "P67"
+      ],
+      "question": "Існують різні думки щодо переговорів з росією. З ЯКИМ ІЗ ЦИХ ТВЕРДЖЕНЬ ВИ ЗГОДНІ БІЛЬШОЮ МІРОЮ?",
+      "prompt": "",
+      "options": [
+        "Так",
+        "Ні",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згода: зараз це ефективний шлях": {
+          "kind": "statement",
+          "statement_index": 0,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після повернення до лінії 23.02.2022": {
+          "kind": "statement",
+          "statement_index": 1,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після відновлення кордонів 1991": {
+          "kind": "statement",
+          "statement_index": 2,
+          "indices": [
+            0
+          ]
+        }
+      },
+      "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+      "location": "PDF, с. 21",
+      "basis": "retrospective",
+      "note": "Кожне з трьох тверджень оцінюється окремо за шкалою Так / Ні / Важко відповісти. Повний перелік тверджень збережений у полі statements. Формулювання з ретроспективної таблиці вересня 2024; окремі старі анкети не опубліковані в цьому звіті.",
+      "language": "uk",
+      "evidence_sha256": "54dd95ef9157f6cac96dfbcfe7f9fd97f92b736faf57c8d83d307a0d97156bdc",
+      "question_ids": [],
+      "statements": [
+        "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз",
+        "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р.",
+        "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р."
+      ],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-RAZUMKOV_WHEN_TALKS-P68",
+      "series": "RAZUMKOV_WHEN_TALKS",
+      "polls": [
+        "P68"
+      ],
+      "question": "Існують різні думки щодо переговорів з росією. З ЯКИМ ІЗ ЦИХ ТВЕРДЖЕНЬ ВИ ЗГОДНІ БІЛЬШОЮ МІРОЮ?",
+      "prompt": "",
+      "options": [
+        "Так",
+        "Ні",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згода: зараз це ефективний шлях": {
+          "kind": "statement",
+          "statement_index": 0,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після повернення до лінії 23.02.2022": {
+          "kind": "statement",
+          "statement_index": 1,
+          "indices": [
+            0
+          ]
+        },
+        "Згода: лише після відновлення кордонів 1991": {
+          "kind": "statement",
+          "statement_index": 2,
+          "indices": [
+            0
+          ]
+        }
+      },
+      "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+      "location": "PDF, с. 21",
+      "basis": "retrospective",
+      "note": "Кожне з трьох тверджень оцінюється окремо за шкалою Так / Ні / Важко відповісти. Повний перелік тверджень збережений у полі statements. Формулювання з ретроспективної таблиці вересня 2024; окремі старі анкети не опубліковані в цьому звіті.",
+      "language": "uk",
+      "evidence_sha256": "54dd95ef9157f6cac96dfbcfe7f9fd97f92b736faf57c8d83d307a0d97156bdc",
+      "question_ids": [],
+      "statements": [
+        "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз",
+        "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р.",
+        "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р."
+      ],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "question": "На які поступки можна піти на переговорах задля завершення бойових дій?",
+      "prompt": "",
+      "options": [
+        "Відмова від членства в НАТО",
+        "Надання російській мові на певних територіях офіційного статусу",
+        "Територіальні поступки",
+        "Відмова від членства в ЄС",
+        "Скорочення чисельності армії",
+        "ЖОДНИХ ПОСТУПОК",
+        "ВВ/ НЕ ЗНАЮ/ ВIДМОВА"
+      ],
+      "instructions": "Cума відповідей перевищує 100%. Респондент міг обрати декілька варіантів відповіді",
+      "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+      "location": "PDF, с. 48",
+      "basis": "retrospective",
+      "note": "Дослівний заголовок ретроспективної таблиці; анкети кожної хвилі тут не наведено. Червень 2025 додав окрему категорію відмови від будь-яких поступок; це змінює контекст порівняння.",
+      "language": "uk",
+      "id": "chart-SOCIS_CONCESSIONS_MULTI-P74",
+      "series": "SOCIS_CONCESSIONS_MULTI",
+      "polls": [
+        "P74",
+        "P81",
+        "P75"
+      ],
+      "question_ids": [],
+      "mapping": {
+        "Відмова від НАТО": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Російська офіційна на певних територіях": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Територіальні поступки": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Відмова від ЄС": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        },
+        "Скорочення армії": {
+          "kind": "option",
+          "indices": [
+            4
+          ]
+        },
+        "Не визначилися": {
+          "kind": "option",
+          "indices": [
+            6
+          ]
+        },
+        "Жодних поступок": {
+          "kind": "option",
+          "indices": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "question": "На які поступки можна піти на переговорах задля завершення бойових дій?",
+      "prompt": "",
+      "options": [
+        "Відмова від членства в НАТО",
+        "Надання російській мові на певних територіях офіційного статусу",
+        "Територіальні поступки",
+        "Відмова від членства в ЄС",
+        "Скорочення чисельності армії",
+        "ВВ/ НЕ ЗНАЮ/ ВIДМОВА"
+      ],
+      "instructions": "Cума відповідей перевищує 100%. Респондент міг обрати декілька варіантів відповіді",
+      "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+      "location": "PDF, с. 48",
+      "basis": "retrospective",
+      "note": "Дослівний заголовок ретроспективної таблиці; анкети кожної хвилі тут не наведено. Червень 2025 додав окрему категорію відмови від будь-яких поступок; це змінює контекст порівняння.",
+      "language": "uk",
+      "id": "chart-SOCIS_CONCESSIONS_MULTI-P72",
+      "series": "SOCIS_CONCESSIONS_MULTI",
+      "polls": [
+        "P72",
+        "P80"
+      ],
+      "question_ids": [],
+      "mapping": {
+        "Відмова від НАТО": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Російська офіційна на певних територіях": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Територіальні поступки": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Відмова від ЄС": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        },
+        "Скорочення армії": {
+          "kind": "option",
+          "indices": [
+            4
+          ]
+        },
+        "Не визначилися": {
+          "kind": "option",
+          "indices": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "id": "chart-IRI_CONCESSIONS_2022-P86",
+      "series": "IRI_CONCESSIONS_2022",
+      "polls": [
+        "P86"
+      ],
+      "question": "What concessions are you personally willing to accept to end the war?",
+      "prompt": "",
+      "options": [
+        "Ukraine declaring neutral status and not pursuing joining NATO",
+        "Recognizing Russian as a second state language",
+        "Recognizing the LDNR as independent states within the territory controlled before February 24, 2022",
+        "Recognizing Crimea as part of Russia",
+        "Recognizing the LDNR as independent states",
+        "All of the above",
+        "None of the above",
+        "Difficult to answer/No answer"
+      ],
+      "instructions": "Multiple responses accepted",
+      "mapping": {
+        "Нейтралітет / відмова від НАТО": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Російська друга державна": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Незалежність ОРДЛО в межах до 24.02.2022": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Крим частина Росії": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        },
+        "Незалежність ОРДЛО (ширша опція)": {
+          "kind": "option",
+          "indices": [
+            4
+          ]
+        },
+        "Усе перелічене": {
+          "kind": "option",
+          "indices": [
+            5
+          ]
+        },
+        "Нічого з переліченого": {
+          "kind": "option",
+          "indices": [
+            6
+          ]
+        },
+        "Не визначилися": {
+          "kind": "option",
+          "indices": [
+            7
+          ]
+        }
+      },
+      "source_url": "https://iri.org/wp-content/uploads/2022/05/2022-April-Survey-of-Residents-of-Ukraine_ENG.pdf",
+      "location": "PDF, с. 38",
+      "basis": "publication-language",
+      "note": "Англомовний звіт; українська анкета не підтверджена. Написання LDNR залишено як у видавця.",
+      "language": "en",
+      "evidence_sha256": "2f87906417d5a1ef102363a48dc056daee355faf8222e32c47b1ad7f1edb3a56",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-IRI_CONCESSIONS_2022-P87",
+      "series": "IRI_CONCESSIONS_2022",
+      "polls": [
+        "P87"
+      ],
+      "question": "What concessions are you personally willing to accept to end the war?",
+      "prompt": "",
+      "options": [
+        "Ukraine declaring neutral status and not pursuing joining NATO",
+        "Recognizing Russian as a second state language",
+        "Recognizing the LDNR as independent states within the territory controlled before February 24, 2022",
+        "Recognizing Crimea as part of Russia",
+        "Recognizing the LDNR as independent states",
+        "All of the above",
+        "None of the above",
+        "Difficult to answer/ No answer"
+      ],
+      "instructions": "Multiple responses accepted",
+      "mapping": {
+        "Нейтралітет / відмова від НАТО": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Російська друга державна": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Незалежність ОРДЛО в межах до 24.02.2022": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Крим частина Росії": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        },
+        "Незалежність ОРДЛО (ширша опція)": {
+          "kind": "option",
+          "indices": [
+            4
+          ]
+        },
+        "Усе перелічене": {
+          "kind": "option",
+          "indices": [
+            5
+          ]
+        },
+        "Нічого з переліченого": {
+          "kind": "option",
+          "indices": [
+            6
+          ]
+        },
+        "Не визначилися": {
+          "kind": "option",
+          "indices": [
+            7
+          ]
+        }
+      },
+      "source_url": "https://www.iri.org/wp-content/uploads/2022/08/2022-June-Survey_ENG_CSIR-APPROVED.pdf",
+      "location": "PDF, с. 44",
+      "basis": "publication-language",
+      "note": "Англомовний звіт; українська анкета не підтверджена. Написання LDNR залишено як у видавця.",
+      "language": "en",
+      "evidence_sha256": "28d1f499cfbd90a04bb05d8aac1829a53d07fd24e1e4cbed1a5f8ef236eb2cc6",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-SAPIENS_NATO_BAN_2022-P89",
+      "series": "SAPIENS_NATO_BAN_2022",
+      "polls": [
+        "P89",
+        "P88"
+      ],
+      "question": "Який із наведених нижче сценаріїв, якщо такий є, ви були б готові прийняти, навіть якщо неохоче, якби це гарантувало негайне припинення війни?",
+      "prompt": "Заборона на вступ України в НАТО",
+      "options": [
+        "Ні, не готові прийняти такий сценарій",
+        "Так, готові прийняти такий сценарій",
+        "Важко сказати/Відмова"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Проти заборони НАТО": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        }
+      },
+      "source_url": "https://www.sapiens.com.ua/publications/socpol-research/211/Release_IS_war_fin_30_03.pdf",
+      "location": "PDF, с. 1",
+      "basis": "retrospective",
+      "note": "Текст і шкалу звірено візуально на графіку. Кожен із трьох сценаріїв оцінювали окремо; таблиця показує три березневі хвилі. Це формулювання графіка, не підтвердження анкет кожної хвилі.",
+      "language": "uk",
+      "evidence_sha256": "2ef508c8f22b681903b80af82db6f9848ef659ff9f559c4a8e3fd0914e938071",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_VICTORY-P107",
+      "series": "ISPP_VICTORY",
+      "polls": [
+        "P107"
+      ],
+      "question": "Перемогою України правомірно буде вважати виведення російських військ за межі територій, захоплених з 24 лютого 2022 року. А повернення Криму і частини Донбасу слід домагатися шляхом подальших переговорів",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 58",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "10368599c7f1c69690e7df65d220c212ca190ea77c07eed54729772c9bc43f0d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_VICTORY-P108",
+      "series": "ISPP_VICTORY",
+      "polls": [
+        "P108"
+      ],
+      "question": "Перемогою України правомірно буде вважати виведення російських військ за межі територій, захоплених з 24 лютого 2022 року. А повернення Криму і частини Донбасу слід домагатися шляхом подальших переговорів",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 58",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "10368599c7f1c69690e7df65d220c212ca190ea77c07eed54729772c9bc43f0d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_VICTORY-P109",
+      "series": "ISPP_VICTORY",
+      "polls": [
+        "P109"
+      ],
+      "question": "Перемогою України правомірно буде вважати виведення російських військ за межі територій, захоплених з 24 лютого 2022 року. А повернення Криму і частини Донбасу слід домагатися шляхом подальших переговорів",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 58",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "10368599c7f1c69690e7df65d220c212ca190ea77c07eed54729772c9bc43f0d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_PEACE_PRICE-P107",
+      "series": "ISPP_PEACE_PRICE",
+      "polls": [
+        "P107"
+      ],
+      "question": "Україні потрібен мир, але не будь-якою ціною",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 60",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "1928a015b0286d88fae202ce0cb5d5708b529d8796943a7a651adde8ef5f7b6d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_PEACE_PRICE-P108",
+      "series": "ISPP_PEACE_PRICE",
+      "polls": [
+        "P108"
+      ],
+      "question": "Україні потрібен мир, але не будь-якою ціною",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 60",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "1928a015b0286d88fae202ce0cb5d5708b529d8796943a7a651adde8ef5f7b6d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_PEACE_PRICE-P109",
+      "series": "ISPP_PEACE_PRICE",
+      "polls": [
+        "P109"
+      ],
+      "question": "Україні потрібен мир, але не будь-якою ціною",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 60",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "1928a015b0286d88fae202ce0cb5d5708b529d8796943a7a651adde8ef5f7b6d",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_SHAME_WAR-P107",
+      "series": "ISPP_SHAME_WAR",
+      "polls": [
+        "P107"
+      ],
+      "question": "Краще маленька ганьба, ніж велика війна",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 61",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "8933cd60e1169e8cac886e6af5d5484c5876f67477bd044e6265f238f8590df5",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_SHAME_WAR-P108",
+      "series": "ISPP_SHAME_WAR",
+      "polls": [
+        "P108"
+      ],
+      "question": "Краще маленька ганьба, ніж велика війна",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 61",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "8933cd60e1169e8cac886e6af5d5484c5876f67477bd044e6265f238f8590df5",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-ISPP_SHAME_WAR-P109",
+      "series": "ISPP_SHAME_WAR",
+      "polls": [
+        "P109"
+      ],
+      "question": "Краще маленька ганьба, ніж велика війна",
+      "prompt": "",
+      "options": [
+        "Згоден",
+        "Не згоден",
+        "Важко відповісти",
+        "Не відповіли"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Згодні": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Не згодні": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        }
+      },
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+      "location": "PDF, с. 61",
+      "basis": "retrospective",
+      "note": "Дослівне судження та категорії таблиці моніторингу. «Не відповіли» — категорія результату, а не зачитувана опція. Вступна інструкція анкети на цій сторінці не наведена.",
+      "language": "uk",
+      "evidence_sha256": "8933cd60e1169e8cac886e6af5d5484c5876f67477bd044e6265f238f8590df5",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "question": "Якби війну можна було завершити просто зараз, яка з перелічених нижче умов укладення миру була б для Вас прийнятною",
+      "prompt": "",
+      "options": [
+        "повна і безумовна капітуляція країни-агресора, виплата нею компенсацій та репарацій за завдану шкоду в повному обсязі",
+        "повернення до державних кордонів 1991 року, включно з Донбасом і Кримом",
+        "припинення вогню та відведення військ обох сторін від лінії зіткнення",
+        "повернення під український контроль територій, окупованих після 24 лютого 2022 року",
+        "перетворення нинішньої лінії зіткнення на державний кордон з країною-агресором, якщо це відкриє шлях для вступу України до НАТО і ЄС",
+        "інше",
+        "важко відповісти"
+      ],
+      "instructions": "",
+      "source_url": "https://ispp.org.ua/wp-content/uploads/2026/01/dovidnikchunikhina2025.pdf",
+      "location": "PDF, с. 115",
+      "basis": "retrospective",
+      "note": "",
+      "language": "uk",
+      "id": "chart-ISPP_PEACE_OPTIONS_2023_24-P110",
+      "series": "ISPP_PEACE_OPTIONS_2023_24",
+      "polls": [
+        "P110",
+        "P111"
+      ],
+      "question_ids": [],
+      "mapping": {
+        "Капітуляція РФ і всі репарації": {
+          "kind": "option",
+          "indices": [
+            0
+          ]
+        },
+        "Кордони 1991": {
+          "kind": "option",
+          "indices": [
+            1
+          ]
+        },
+        "Припинення вогню / взаємне відведення": {
+          "kind": "option",
+          "indices": [
+            2
+          ]
+        },
+        "Повернення окупованого після 24.02.2022": {
+          "kind": "option",
+          "indices": [
+            3
+          ]
+        },
+        "Нинішня лінія як кордон за вступу до НАТО/ЄС": {
+          "kind": "option",
+          "indices": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "chart-NDI_PEACE_PRICE_TERRITORY_REJECT-P117",
+      "series": "NDI_PEACE_PRICE_TERRITORY_REJECT",
+      "polls": [
+        "P117"
+      ],
+      "question": "Наскільки Ви готові прийняти кожен із наступних варіантів як можливу ціну за досягнення миру?",
+      "prompt": "Міжнародне визнання Криму та частини Донбасу як територій Росії",
+      "options": [
+        "Повністю не приймаю",
+        "скоріше не приймаю"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Повністю або скоріше не приймають": {
+          "kind": "aggregate",
+          "indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+      "location": "PDF, с. 22",
+      "basis": "retrospective",
+      "note": "Серпень 2025 — окрема ретроспективна точка, не дубль березня 2026. Слайд відтворює питання та лише дві категорії, що входять до агрегату неприйняття. Повної шкали цієї хвилі тут немає; опції з березня 2026 не перенесено.",
+      "language": "uk",
+      "evidence_sha256": "7dc4022a959c6b2c3dd3910f04f372238907b35ab5415bcb961ebea51cc94070",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-NDI_PEACE_PRICE_TERRITORY_REJECT-P10",
+      "series": "NDI_PEACE_PRICE_TERRITORY_REJECT",
+      "polls": [
+        "P10"
+      ],
+      "question": "Наскільки Ви готові прийняти кожен із наступних варіантів як можливу ціну за досягнення миру?",
+      "prompt": "Міжнародне визнання Криму та частини Донбасу як територій Росії",
+      "options": [
+        "Повністю не приймаю",
+        "Скоріше не приймаю",
+        "Скоріше приймаю",
+        "Повністю приймаю",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Повністю або скоріше не приймають": {
+          "kind": "aggregate",
+          "indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+      "location": "PDF, с. 21, 22",
+      "basis": "report",
+      "note": "Березень 2026. Питання й шкалу звірено візуально на с. 21; вони вбудовані як зображення. На с. 22 — авторська сума двох категорій неприйняття.",
+      "language": "uk",
+      "evidence_sha256": "520ff71dd7c5659788c681a8a9886b39d14bab89ddece15bbe64b41920324b1f",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-NDI_PEACE_PRICE_LANGUAGE_REJECT-P117",
+      "series": "NDI_PEACE_PRICE_LANGUAGE_REJECT",
+      "polls": [
+        "P117"
+      ],
+      "question": "Наскільки Ви готові прийняти кожен із наступних варіантів як можливу ціну за досягнення миру?",
+      "prompt": "Надання російській мові офіційного статусу в Україні",
+      "options": [
+        "Повністю не приймаю",
+        "скоріше не приймаю"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Повністю або скоріше не приймають": {
+          "kind": "aggregate",
+          "indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+      "location": "PDF, с. 22",
+      "basis": "retrospective",
+      "note": "Серпень 2025 — окрема ретроспективна точка, не дубль березня 2026. Слайд відтворює питання та лише дві категорії, що входять до агрегату неприйняття. Повної шкали цієї хвилі тут немає; опції з березня 2026 не перенесено.",
+      "language": "uk",
+      "evidence_sha256": "7dc4022a959c6b2c3dd3910f04f372238907b35ab5415bcb961ebea51cc94070",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    },
+    {
+      "id": "chart-NDI_PEACE_PRICE_LANGUAGE_REJECT-P10",
+      "series": "NDI_PEACE_PRICE_LANGUAGE_REJECT",
+      "polls": [
+        "P10"
+      ],
+      "question": "Наскільки Ви готові прийняти кожен із наступних варіантів як можливу ціну за досягнення миру?",
+      "prompt": "Надання російській мові офіційного статусу в Україні",
+      "options": [
+        "Повністю не приймаю",
+        "Скоріше не приймаю",
+        "Скоріше приймаю",
+        "Повністю приймаю",
+        "Важко відповісти"
+      ],
+      "instructions": "",
+      "mapping": {
+        "Повністю або скоріше не приймають": {
+          "kind": "aggregate",
+          "indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+      "location": "PDF, с. 21, 22",
+      "basis": "report",
+      "note": "Березень 2026. Питання й шкалу звірено візуально на с. 21; вони вбудовані як зображення. На с. 22 — авторська сума двох категорій неприйняття.",
+      "language": "uk",
+      "evidence_sha256": "520ff71dd7c5659788c681a8a9886b39d14bab89ddece15bbe64b41920324b1f",
+      "question_ids": [],
+      "reviewed_on": "2026-10-05"
+    }
+  ],
+  "questions": {
+    "Q026": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 10.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 82.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 8.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1111&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q027": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 10.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 84.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 6.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1124&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q028": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 8.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 87.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 5.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1133&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q029": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 8.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 85.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 6.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1167&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q030": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 9.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 87.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 5.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1192&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q031": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 10.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 84.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 6.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1242&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q032": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 14.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 80.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 6.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1301&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q033": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 19.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 74.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 7.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1332&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q035": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 32.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 55.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 13.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1421&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q036": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 32.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 58.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 10.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1447&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q037": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 38.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 51.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 11.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1465&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q039": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 38.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 52.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 10.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1535&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q040": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 38.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 54.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 8.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1559&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q054": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 33.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 53.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 14.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q034": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 26.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 65.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 9.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1559&lang=ukr",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q038": {
+      "series": [
+        "KIIS_TERRITORY_GENERAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може відмовитися від деяких своїх територій",
+              "value": 39.0
+            },
+            {
+              "label": "За жодних обставин Україна не має відмовлятися від жодних своїх територій, навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 50.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 11.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1559&lang=ukr",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q055": {
+      "series": [
+        "KIIS_RECOGNITION_LEGAL"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може офіційно визнати окремі території частиною Росії та назавжди відмовитися від них",
+              "value": 25.0
+            },
+            {
+              "label": "За жодних обставин Україна не має офіційно визнавати окремі території частиною Росії та назавжди відмовлятися від них. Навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 58.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 17.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q056": {
+      "series": [
+        "KIIS_UNOCCUPIED_TRANSFER"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна може передати під контроль Росії території, які зараз контролюються Україною, як-от міста Херсон, Запоріжжя тощо",
+              "value": 18.0
+            },
+            {
+              "label": "За жодних обставин Україна не має передавати під контроль Росії території, які зараз контролюються Україною, як-от міста Херсон, Запоріжжя тощо. Навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 66.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 16.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q057": {
+      "series": [
+        "KIIS_FREEZE_NO_RECOGNITION"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Для якнайшвидшого досягнення миру і збереження незалежності Україна погоджується, що Росія зберігає контроль над окупованими територіями, але при цьому Україна і світ офіційно цього не визнають",
+              "value": 39.0
+            },
+            {
+              "label": "За жодних обставин Україна не має погоджуватися і дозволяти Росії зберігати навіть неофіційний контроль над окупованими територіями. Навіть якщо через це війна триватиме довше і будуть загрози збереженню незалежності",
+              "value": 50.0
+            },
+            {
+              "label": "Важко сказати (категорія графіка видавця)",
+              "value": 11.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q060": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 39.0
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 54.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1579&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q061": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 40.0
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 52.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1583&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q02": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 36.0
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 57.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1589&lang=ukr&page=2",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q062": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 33.0
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 62.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1597&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q063": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 36.0
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 57.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1608&lang=ukr",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q04": {
+      "series": [
+        "KIIS_DONBAS_GUARANTEES_2026"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 33.0
+            },
+            {
+              "label": "Ця умова абсолютно неприйнятна",
+              "value": 60.0
+            }
+          ],
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1626&lang=ukr&page=1",
+          "location": "Додаток: формулювання запитань"
+        }
+      ]
+    },
+    "Q070": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 59.0
+            },
+            {
+              "label": "Ні",
+              "value": 37.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 4.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q071": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 44.0
+            },
+            {
+              "label": "Ні",
+              "value": 52.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 4.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q072": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 29.0
+            },
+            {
+              "label": "Ні",
+              "value": 66.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 5.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q073": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 33.0
+            },
+            {
+              "label": "Ні",
+              "value": 63.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 3.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q074": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 42.0
+            },
+            {
+              "label": "Ні",
+              "value": 53.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 5.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q075": {
+      "series": [
+        "NDI_ENTER_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Так",
+              "value": 57.0
+            },
+            {
+              "label": "Ні",
+              "value": 38.0
+            },
+            {
+              "label": "Не знаю",
+              "value": 5.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/May%202024%20Opportunities%20and%20Challenges%20Facing%20Ukraine%E2%80%99s%20Democratic%20Transition%20%28Ukrainian%29.pdf",
+          "location": "PDF, с. 23"
+        }
+      ]
+    },
+    "Q133": {
+      "series": [
+        "IRI_PEACE_REFERENDUM"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Однозначно підтримую",
+              "value": 29.0
+            },
+            {
+              "label": "Скоріше підтримую",
+              "value": 25.0
+            },
+            {
+              "label": "Скоріше не підтримую",
+              "value": 13.0
+            },
+            {
+              "label": "Однозначно не підтримую",
+              "value": 25.0
+            },
+            {
+              "label": "Важко відповісти/Немає відповіді",
+              "value": 8.0
+            }
+          ],
+          "source_url": "https://www.iri.org/wp-content/uploads/2026/06/UKR-26-NS-02-PT-UA-Public.pdf",
+          "location": "PDF, с. 53"
+        }
+      ]
+    },
+    "Q134": {
+      "series": [
+        "IRI_PEACE_REFERENDUM"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Однозначно підтримую",
+              "value": 27.0
+            },
+            {
+              "label": "Скоріше підтримую",
+              "value": 24.0
+            },
+            {
+              "label": "Скоріше не підтримую",
+              "value": 12.0
+            },
+            {
+              "label": "Однозначно не підтримую",
+              "value": 28.0
+            },
+            {
+              "label": "Важко відповісти/Немає відповіді",
+              "value": 9.0
+            }
+          ],
+          "source_url": "https://www.iri.org/wp-content/uploads/2026/06/UKR-26-NS-02-PT-UA-Public.pdf",
+          "location": "PDF, с. 53"
+        }
+      ]
+    },
+    "Q135": {
+      "series": [
+        "IRI_PEACE_REFERENDUM"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Однозначно підтримую",
+              "value": 27.0
+            },
+            {
+              "label": "Скоріше підтримую",
+              "value": 25.0
+            },
+            {
+              "label": "Скоріше не підтримую",
+              "value": 15.0
+            },
+            {
+              "label": "Однозначно не підтримую",
+              "value": 25.0
+            },
+            {
+              "label": "Важко відповісти/Немає відповіді",
+              "value": 9.0
+            }
+          ],
+          "source_url": "https://www.iri.org/wp-content/uploads/2026/06/UKR-26-NS-02-PT-UA-Public.pdf",
+          "location": "PDF, с. 53"
+        }
+      ]
+    },
+    "Q079": {
+      "series": [
+        "RAZUMKOV_MINIMUM_PEACE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Звільнення України від російських військ у кордонах 1991 року",
+              "value": 51.5
+            },
+            {
+              "label": "Звільнення України від російських військ у по лінії розмежування початку 2022 року",
+              "value": 25.8
+            },
+            {
+              "label": "Припускаю фіксацію кордонів по лінії фронту на момент укладання угоди",
+              "value": 9.4
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 13.3
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/otsinka-gromadianamy-sytuatsii-v-kraini-bachennia-shliakhiv-vyrishennia-bezpekovykh-problem-sichen-liutyi-2026r",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q080": {
+      "series": [
+        "RAZUMKOV_MINIMUM_PEACE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Звільнення України від російських військ у кордонах 1991 року",
+              "value": 39.5
+            },
+            {
+              "label": "Звільнення України від російських військ у по лінії розмежування початку 2022 року",
+              "value": 29.8
+            },
+            {
+              "label": "Припускаю фіксацію кордонів по лінії фронту на момент укладання угоди",
+              "value": 10.8
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 19.9
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/otsinka-gromadianamy-sytuatsii-v-kraini-bachennia-shliakhiv-vyrishennia-bezpekovykh-problem-sichen-liutyi-2026r",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q081": {
+      "series": [
+        "RAZUMKOV_MINIMUM_PEACE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Звільнення України від російських військ у кордонах 1991 року",
+              "value": 28.2
+            },
+            {
+              "label": "Звільнення України від російських військ у по лінії розмежування початку 2022 року",
+              "value": 31.8
+            },
+            {
+              "label": "Припускаю фіксацію кордонів по лінії фронту на момент укладання угоди",
+              "value": 20.7
+            },
+            {
+              "label": "Припускаю повне виведення українських військ з Донецької, Луганської, Херсонської і Запорізької областей. Причому з усієї території цих областей у межах їхніх адміністративних кордонів",
+              "value": 6.2
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 13.1
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/otsinka-gromadianamy-sytuatsii-v-kraini-bachennia-shliakhiv-vyrishennia-bezpekovykh-problem-sichen-liutyi-2026r",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q082": {
+      "series": [
+        "RAZUMKOV_MINIMUM_PEACE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Звільнення України від російських військ у кордонах 1991 року",
+              "value": 33.2
+            },
+            {
+              "label": "Звільнення України від російських військ у межах на 24 лютого 2022 р.",
+              "value": 25.5
+            },
+            {
+              "label": "Припускаю фіксацію кордонів по лінії фронту на момент укладання угоди",
+              "value": 23.5
+            },
+            {
+              "label": "Припускаю повне виведення українських військ з Донбасу, навіть з тих територій, які зараз контролюються Україною",
+              "value": 3.7
+            },
+            {
+              "label": "Припускаю повне виведення українських військ з Донецької, Луганської, Херсонської і Запорізької областей. Причому з усієї території цих областей у межах їхніх адміністративних кордонів",
+              "value": 3.7
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 10.3
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/otsinka-gromadianamy-sytuatsii-v-kraini-bachennia-shliakhiv-vyrishennia-bezpekovykh-problem-sichen-liutyi-2026r",
+          "location": "Таблиця / графік у публікації"
+        }
+      ]
+    },
+    "Q097": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 36.1
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 33.5
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення (як було після Мінських угод в 2015-2019 рр.)",
+              "value": 8.2
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 11.0
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2024/10/Prezent_CEA_UA_n2000_traven.pdf",
+          "location": "PDF, с. 12"
+        }
+      ]
+    },
+    "Q098": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 46.1
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 26.2
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення (як було після Мінських угод в 2015-2019 рр.)",
+              "value": 10.4
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 9.7
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2024/10/Prezent_CEA_UA_n2000_traven.pdf",
+          "location": "PDF, с. 12"
+        }
+      ]
+    },
+    "Q101": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 58.3
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 10.7
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 17.6
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 8.0
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/03/Present_UA_Barometr_F2F_n2000_Februar_2025.pdf",
+          "location": "PDF, с. 39"
+        }
+      ]
+    },
+    "Q102": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 56.5
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 11.0
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 17.2
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 7.7
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/03/Present_UA_Barometr_F2F_n2000_March_2025_1.pdf",
+          "location": "PDF, с. 10"
+        }
+      ]
+    },
+    "Q106": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 58.2
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 10.2
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 19.0
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 8.7
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+          "location": "PDF, с. 46"
+        }
+      ]
+    },
+    "Q099": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 49.4
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 18.4
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 17.8
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 8.6
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+          "location": "PDF, с. 47"
+        }
+      ]
+    },
+    "Q100": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 50.6
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 14.7
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 19.5
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 10.2
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+          "location": "PDF, с. 47"
+        }
+      ]
+    },
+    "Q103": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 56.6
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 14.2
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 15.1
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 8.2
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+          "location": "PDF, с. 47"
+        }
+      ]
+    },
+    "Q105": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 54.5
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 11.6
+            },
+            {
+              "label": "Призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 20.9
+            },
+            {
+              "label": "Продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 7.4
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/11/Present_UA_Barometr_F2F_n2000_Oktober_2025.pdf",
+          "location": "PDF, с. 47"
+        }
+      ]
+    },
+    "Q104": {
+      "series": [
+        "SOCIS_WAR_SCENARIO"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "пошук компромісного рішення з залученням лідерів інших країн заради припинення війни",
+              "value": 55.7
+            },
+            {
+              "label": "продовження бойових дій до відновлення кордонів станом на 1991 рік",
+              "value": 12.8
+            },
+            {
+              "label": "призупинення бойових дій і тимчасове замороження конфлікту по сучасній лінії зіткнення",
+              "value": 16.6
+            },
+            {
+              "label": "продовження бойових дій до відновлення кордонів станом на 23 лютого 2022 року",
+              "value": 8.6
+            }
+          ],
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/06/2025-06-25.pdf",
+          "location": "PDF, с. 28"
+        }
+      ]
+    },
+    "Q08": {
+      "series": [
+        "GALLUP_NEGOTIATIONS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Ukraine should seek to negotiate an ending to the war as soon as possible",
+              "value": 66.0
+            },
+            {
+              "label": "Ukraine should continue fighting until it wins the war",
+              "value": 24.0
+            }
+          ],
+          "source_url": "https://news.gallup.com/poll/711992/ukrainians-sour-washington-views-war-stabilize.aspx",
+          "location": "Графік Gallup; англомовна публікація"
+        }
+      ]
+    },
+    "Q13": {
+      "series": [
+        "NDI_PEACE_PRICE_TERRITORY_REJECT"
+      ],
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Повністю не приймаю",
+              "value": 55
+            },
+            {
+              "label": "Скоріше не приймаю",
+              "value": 14
+            },
+            {
+              "label": "Скоріше приймаю",
+              "value": 10
+            },
+            {
+              "label": "Повністю приймаю",
+              "value": 4
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 16
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Округлені сегменти. Авторський агрегат неприйняття — 70%; сума двох округлених сегментів — 69%.",
+          "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+          "location": "PDF, с. 21, 22"
+        }
+      ]
+    },
+    "Q137": {
+      "series": [
+        "NDI_PEACE_PRICE_TERRITORY_REJECT"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю не приймаю» + «скоріше не приймаю»",
+              "value": 70.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+          "location": "PDF, с. 22"
+        }
+      ]
+    },
+    "Q14": {
+      "series": [
+        "NDI_PEACE_PRICE_LANGUAGE_REJECT"
+      ],
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Повністю не приймаю",
+              "value": 54
+            },
+            {
+              "label": "Скоріше не приймаю",
+              "value": 15
+            },
+            {
+              "label": "Скоріше приймаю",
+              "value": 11
+            },
+            {
+              "label": "Повністю приймаю",
+              "value": 7
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 13
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Округлені сегменти. Авторський агрегат неприйняття — 70%; сума двох округлених сегментів — 69%.",
+          "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+          "location": "PDF, с. 21, 22"
+        }
+      ]
+    },
+    "Q138": {
+      "series": [
+        "NDI_PEACE_PRICE_LANGUAGE_REJECT"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю не приймаю» + «скоріше не приймаю»",
+              "value": 72.0
+            }
+          ],
+          "source_url": "https://www.ndi.org/sites/default/files/2026-07/UKR_NDI-March-2026-Political-Survey_Public.pptx.pdf",
+          "location": "PDF, с. 22"
+        }
+      ]
+    },
+    "Q083": {
+      "series": [
+        "RAZUMKOV_WHEN_TALKS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз — Так",
+              "value": 16.6
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р. — Так",
+              "value": 20.6
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р. — Так",
+              "value": 57.5
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+          "location": "PDF, с. 21"
+        }
+      ]
+    },
+    "Q084": {
+      "series": [
+        "RAZUMKOV_WHEN_TALKS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз — Так",
+              "value": 13.1
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р. — Так",
+              "value": 17.6
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р. — Так",
+              "value": 60.7
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+          "location": "PDF, с. 21"
+        }
+      ]
+    },
+    "Q085": {
+      "series": [
+        "RAZUMKOV_WHEN_TALKS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз — Так",
+              "value": 20.9
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р. — Так",
+              "value": 25.1
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р. — Так",
+              "value": 60.8
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+          "location": "PDF, с. 21"
+        }
+      ]
+    },
+    "Q086": {
+      "series": [
+        "RAZUMKOV_WHEN_TALKS"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Це дієвий спосіб досягнення миру, яким слід скористатися вже зараз — Так",
+              "value": 35.2
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення її військ на лінію протистояння станом на 23 лютого 2022 р. — Так",
+              "value": 37.2
+            },
+            {
+              "label": "Переговори з росією слід вести тільки після витіснення (виведення) її військ на кордони станом на 1991 р. — Так",
+              "value": 49.4
+            }
+          ],
+          "source_url": "https://razumkov.org.ua/images/2024/12/10/2024-PAKT-November-RC.pdf",
+          "location": "PDF, с. 21"
+        }
+      ]
+    },
+    "Q112": {
+      "series": [
+        "IRI_CONCESSIONS_2022"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Ukraine declaring neutral status and not pursuing joining NATO",
+              "value": 37.0
+            },
+            {
+              "label": "Recognizing Russian as a second state language",
+              "value": 8.0
+            },
+            {
+              "label": "Recognizing the LDNR as independent states within the territory controlled before February 24, 2022",
+              "value": 6.0
+            },
+            {
+              "label": "Recognizing Crimea as part of Russia",
+              "value": 5.0
+            },
+            {
+              "label": "Recognizing the LDNR as independent states",
+              "value": 1.0
+            },
+            {
+              "label": "All of the above",
+              "value": 4.0
+            },
+            {
+              "label": "None of the above",
+              "value": 44.0
+            },
+            {
+              "label": "Difficult to answer/No answer",
+              "value": 8.0
+            }
+          ],
+          "source_url": "https://iri.org/wp-content/uploads/2022/05/2022-April-Survey-of-Residents-of-Ukraine_ENG.pdf",
+          "location": "PDF, с. 38"
+        }
+      ]
+    },
+    "Q113": {
+      "series": [
+        "IRI_CONCESSIONS_2022"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Ukraine declaring neutral status and not pursuing joining NATO",
+              "value": 29.0
+            },
+            {
+              "label": "Recognizing Russian as a second state language",
+              "value": 8.0
+            },
+            {
+              "label": "Recognizing the LDNR as independent states within the territory controlled before February 24, 2022",
+              "value": 6.0
+            },
+            {
+              "label": "Recognizing Crimea as part of Russia",
+              "value": 5.0
+            },
+            {
+              "label": "Recognizing the LDNR as independent states",
+              "value": 2.0
+            },
+            {
+              "label": "All of the above",
+              "value": 5.0
+            },
+            {
+              "label": "None of the above",
+              "value": 40.0
+            },
+            {
+              "label": "Difficult to answer/ No answer",
+              "value": 9.0
+            }
+          ],
+          "source_url": "https://www.iri.org/wp-content/uploads/2022/08/2022-June-Survey_ENG_CSIR-APPROVED.pdf",
+          "location": "PDF, с. 44"
+        }
+      ]
+    },
+    "Q118": {
+      "series": [
+        "ISPP_VICTORY"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 30.4
+            },
+            {
+              "label": "Не згоден",
+              "value": 41.7
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 58"
+        }
+      ]
+    },
+    "Q121": {
+      "series": [
+        "ISPP_VICTORY"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 39.4
+            },
+            {
+              "label": "Не згоден",
+              "value": 26.2
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 58"
+        }
+      ]
+    },
+    "Q124": {
+      "series": [
+        "ISPP_VICTORY"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 59.2
+            },
+            {
+              "label": "Не згоден",
+              "value": 15.1
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 58"
+        }
+      ]
+    },
+    "Q119": {
+      "series": [
+        "ISPP_PEACE_PRICE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 66.6
+            },
+            {
+              "label": "Не згоден",
+              "value": 11.9
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 60"
+        }
+      ]
+    },
+    "Q122": {
+      "series": [
+        "ISPP_PEACE_PRICE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 70.5
+            },
+            {
+              "label": "Не згоден",
+              "value": 11.2
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 60"
+        }
+      ]
+    },
+    "Q125": {
+      "series": [
+        "ISPP_PEACE_PRICE"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 76.3
+            },
+            {
+              "label": "Не згоден",
+              "value": 10.7
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 60"
+        }
+      ]
+    },
+    "Q120": {
+      "series": [
+        "ISPP_SHAME_WAR"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 18.3
+            },
+            {
+              "label": "Не згоден",
+              "value": 45.4
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 61"
+        }
+      ]
+    },
+    "Q123": {
+      "series": [
+        "ISPP_SHAME_WAR"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 26.1
+            },
+            {
+              "label": "Не згоден",
+              "value": 30.7
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 61"
+        }
+      ]
+    },
+    "Q126": {
+      "series": [
+        "ISPP_SHAME_WAR"
+      ],
+      "plots": [
+        {
+          "unit": "percent",
+          "heading": "",
+          "caption": "Ті самі опубліковані категорії, що й у часовому ряді. Пропущені категорії не дорівнюють нулю.",
+          "rows": [
+            {
+              "label": "Згоден",
+              "value": 37.0
+            },
+            {
+              "label": "Не згоден",
+              "value": 28.6
+            }
+          ],
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2025/06/dynamika-2025-byuleten.pdf",
+          "location": "PDF, с. 61"
+        }
+      ]
+    },
+    "Q114": {
+      "series": [
+        "SAPIENS_NATO_BAN_2022"
+      ],
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Офіційне визнання раніше окупованих районів Донбасу частиною Росії",
+              "value": 82
+            },
+            {
+              "label": "Офіційне визнання Криму частиною Росії",
+              "value": 80
+            },
+            {
+              "label": "Заборона на вступ України в НАТО",
+              "value": 45
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Для кожного сценарію — «Ні, не готові прийняти такий сценарій». Показано лише цю категорію.",
+          "source_url": "https://www.sapiens.com.ua/publications/socpol-research/211/Release_IS_war_fin_30_03.pdf",
+          "location": "PDF, с. 1"
+        }
+      ]
+    },
+    "Q01": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Скоріше вірите",
+              "value": 25
+            },
+            {
+              "label": "Скоріше НЕ вірите",
+              "value": 70
+            },
+            {
+              "label": "Сума відповідей: «ВАЖКО СКАЗАТИ (НЕ ЗАЧИТУВАТИ)» + «ВІДМОВА ВІДПОВІДАТИ (НЕ ЗАЧИТУВАТИ)»",
+              "value": 5
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1589&lang=ukr&page=2",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q03": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 25
+            },
+            {
+              "label": "Ця умова абсолютна неприйнятна",
+              "value": 68
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1589&lang=ukr&page=2",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q05": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся з цією умовою» + «Це буде складна умова, але загалом прийнятна»",
+              "value": 59
+            },
+            {
+              "label": "Ця умова абсолютно неприйнятна",
+              "value": 31
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1626&lang=ukr&page=1",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q042": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 38
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 54
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1421&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q043": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 47
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 38
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1421&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q044": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 57
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 33
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1421&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q046": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 10
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 82
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1530&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q047": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 29
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 61
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1530&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q048": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 51
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 40
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1530&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q049": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 17
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 76
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1543&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q050": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 39
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 49
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1543&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q051": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 54
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 30
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1543&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q052": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 17
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 75
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1551&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q059": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 17
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 74
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q065": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Легко погодитесь на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 32
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 61
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1615&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q066": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Легко погодитесь на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 42
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 49
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1615&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q067": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Легко погодитесь на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 53
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 37
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1615&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q068": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Легко погодитесь на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 61
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 33
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1615&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q053": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 74
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1551&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q058": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 69
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1572&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q06": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "У разі підписання угоди про мир між Україною і Росією, Росія порушить угоду і нападе на Україну, як тільки це їй буде зручно",
+              "value": 75.2
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/otsinka-gromadianamy-sytuatsii-v-kraini-bachennia-shliakhiv-vyrishennia-bezpekovykh-problem-sichen-liutyi-2026r",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q09": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Definitely yes",
+              "value": 10
+            },
+            {
+              "label": "Probably yes",
+              "value": 19
+            },
+            {
+              "label": "Probably no",
+              "value": 23
+            },
+            {
+              "label": "Definitely no",
+              "value": 42
+            },
+            {
+              "label": "Difficult to answer",
+              "value": 6
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/69fc97cc24681fef3b6d3d96_wfd_polll_presentation_january_2026_compressed.pdf",
+          "location": "PDF, с. 34"
+        }
+      ],
+      "series": []
+    },
+    "Q10": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Створення демілітаризованої зони на територіях України, які зараз утримуються росією, із західними гарантіями безпеки",
+              "value": 37
+            },
+            {
+              "label": "Постійна заборона на вступ України до НАТО",
+              "value": 11
+            },
+            {
+              "label": "Передача росії всіх територій, які зараз нею окуповані",
+              "value": 7
+            },
+            {
+              "label": "Амністія за військові злочини для російських лідерів",
+              "value": 5
+            },
+            {
+              "label": "Створення демілітаризованої зони на територіях України, які зараз утримуються росією, без західних гарантій безпеки",
+              "value": 4
+            },
+            {
+              "label": "Жодна з цих ситуацій не є для мене прийнятною",
+              "value": 30
+            },
+            {
+              "label": "Важко відповісти/Немає відповіді",
+              "value": 17
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Множинний вибір: сума може перевищувати 100%.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/69f3339c6741176b5932c931_UKR-26-NS-01-PT-UKR_Final-Public_compressed.pdf",
+          "location": "PDF, с. 49"
+        }
+      ],
+      "series": []
+    },
+    "Q07": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Звільнення України від російських військ у кордонах 1991 року",
+              "value": 28.8
+            },
+            {
+              "label": "Звільнення України від російських військ у межах на 24 лютого 2022 року",
+              "value": 27.5
+            },
+            {
+              "label": "Припускаю фіксацію кордонів по лінії фронту на момент укладання угоди",
+              "value": 21.7
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 11.1
+            },
+            {
+              "label": "Припускаю повне виведення українських військ з Донецької, Луганської, Херсонської і Запорізької областей, причому з усієї території цих областей у межах їхніх адміністративних кордонів",
+              "value": 5.6
+            },
+            {
+              "label": "Припускаю повне виведення українських військ з Донбасу, навіть з тих територій, які зараз контролюються Україною",
+              "value": 5.2
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://ksf-openukraine.s3.eu-central-1.amazonaws.com/PREZENTA_Cz_I_Ya_RAZUMKOV_Cz_ENTR_KBF_2026_beb6820f64.pdf",
+          "location": "PDF, с. 6"
+        }
+      ],
+      "series": []
+    },
+    "Q11": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Продовжувати оборону та не погоджуватися на будь-які територіальні поступки росії",
+              "value": 66
+            },
+            {
+              "label": "Погодитися поступитись неокупованими територіями Донецької, Запорізької, Херсонської областей на користь росії заради якнайшвидшого припинення бойових дій",
+              "value": 22
+            },
+            {
+              "label": "Важко відповісти/Відмова",
+              "value": 12
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://www.sapiens.com.ua/publications/socpol-research/389/Звіт_Омнібус_УНЦПД_2026_для%20сайту.pdf",
+          "location": "PDF, с. 18"
+        }
+      ],
+      "series": []
+    },
+    "Q12": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Збільшення постачання зброї і фінансової допомоги",
+              "value": 64.1
+            },
+            {
+              "label": "Гуманітарні проєкти (розмінування, психологічна стійкість, підтримка ветеранів)",
+              "value": 44.4
+            },
+            {
+              "label": "Надання Україні запрошення на членство в НАТО",
+              "value": 35.8
+            },
+            {
+              "label": "Відправка військового контингенту НАТО в Україну",
+              "value": 34.9
+            },
+            {
+              "label": "Розширення програм тренування українських військових",
+              "value": 28.6
+            },
+            {
+              "label": "Публічна відмова НАТО від членства України, припинення співпраці задля зупинки війни",
+              "value": 16.3
+            },
+            {
+              "label": "Інше",
+              "value": 1.8
+            },
+            {
+              "label": "Важко сказати/відмова від відповіді",
+              "value": 4.5
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Множинний вибір: сума може перевищувати 100%.",
+          "source_url": "https://neweurope.org.ua/wp-content/uploads/2026/04/Opinion-Poll-Results_NATO-2026_ukr-1.pdf",
+          "location": "PDF, с. 12"
+        }
+      ],
+      "series": []
+    },
+    "Q15": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Acceptable",
+              "value": 30
+            },
+            {
+              "label": "Worth considering",
+              "value": 29
+            },
+            {
+              "label": "Not acceptable",
+              "value": 35
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 6
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A343:A349; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q128": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Acceptable",
+              "value": 20
+            },
+            {
+              "label": "Worth considering",
+              "value": 25
+            },
+            {
+              "label": "Not acceptable",
+              "value": 52
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A352:A358; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q129": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Acceptable",
+              "value": 12
+            },
+            {
+              "label": "Worth considering",
+              "value": 26
+            },
+            {
+              "label": "Not acceptable",
+              "value": 55
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 7
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A361:A367; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q130": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Acceptable",
+              "value": 44
+            },
+            {
+              "label": "Worth considering",
+              "value": 32
+            },
+            {
+              "label": "Not acceptable",
+              "value": 21
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A370:A376; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q131": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Acceptable",
+              "value": 15
+            },
+            {
+              "label": "Worth considering",
+              "value": 26
+            },
+            {
+              "label": "Not acceptable",
+              "value": 56
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A379:A385; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q132": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "To continue fighting until Russia's military are defeated",
+              "value": 26
+            },
+            {
+              "label": "For negotiations to start between diplomatic representatives from Russia and Ukraine to end the conflict",
+              "value": 69
+            },
+            {
+              "label": "Don’t know/ Refuse",
+              "value": 5
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://lordashcroftpolls.com/wp-content/uploads/2026/05/Ukraine-tables-April-2026.xlsx",
+          "location": "Ukraine Tabs, A322:A327; числа: колонка D (April 2026)"
+        }
+      ],
+      "series": []
+    },
+    "Q16": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «однозначно так» + «швидше так»",
+              "value": 28.8
+            },
+            {
+              "label": "Сума відповідей: «швидше ні» + «однозначно ні»",
+              "value": 58.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://activegroup.com.ua/wp-content/uploads/pulse/260912-192/pulse-192.html",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q17": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Скоріше підтримую",
+              "value": 72.2
+            },
+            {
+              "label": "Скоріше виступаю проти",
+              "value": 20.8
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 7
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://frf.org.ua/wp-content/uploads/2026/10/ФДМ_Презентація_09-2026_V6_основна.pdf",
+          "location": "PDF, с. 8"
+        }
+      ],
+      "series": []
+    },
+    "Q18": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Ні, за жодних умов",
+              "value": 20.4
+            },
+            {
+              "label": "Скоріше ні",
+              "value": 20.9
+            },
+            {
+              "label": "Скоріше так",
+              "value": 22.3
+            },
+            {
+              "label": "Так, якщо це призведе до закінчення війни",
+              "value": 29.4
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 7
+            }
+          ],
+          "unit": "percent",
+          "heading": "Територіальні компроміси",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://frf.org.ua/wp-content/uploads/2026/10/ФДМ_Презентація_09-2026_V6_основна.pdf",
+          "location": "PDF, с. 11, 14"
+        },
+        {
+          "rows": [
+            {
+              "label": "Цілком припустимо",
+              "value": 6.6
+            },
+            {
+              "label": "Скоріше припустимо",
+              "value": 9.4
+            },
+            {
+              "label": "Скоріше неприпустимо",
+              "value": 21.1
+            },
+            {
+              "label": "Категорично неприпустимо",
+              "value": 55.2
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 7.7
+            }
+          ],
+          "unit": "percent",
+          "heading": "Скорочення чи обмеження чисельності ЗСУ на вимогу іншої сторони. За умови гарантування безпеки на підконтрольній території України",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://frf.org.ua/wp-content/uploads/2026/10/ФДМ_Презентація_09-2026_V6_основна.pdf",
+          "location": "PDF, с. 11, 14"
+        }
+      ],
+      "series": []
+    },
+    "Q19": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Потужна власна армія",
+              "value": 33
+            },
+            {
+              "label": "Двосторонні угоди про безпеку з провідними країнами світу*",
+              "value": 16
+            },
+            {
+              "label": "Створення нової системи безпеки в Європі за участі України",
+              "value": 15
+            },
+            {
+              "label": "Повноправний вступ України до НАТО",
+              "value": 11
+            },
+            {
+              "label": "Нейтральний статус України (позаблоковість) під міжнародним протекторатом",
+              "value": 10
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 15
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://gradus.app/en/report/fewer-donations-faith-afu-changing-hopes/",
+          "location": "Україномовний графік у публікації, слайд 8"
+        }
+      ],
+      "series": []
+    },
+    "Q20": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Підтримую",
+              "value": 74
+            },
+            {
+              "label": "Не підтримую",
+              "value": 24
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 2
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/68da49bd0a458a73700a6f32_rg_ua_1000_032022_v_press_compressed.pdf",
+          "location": "PDF, с. 22"
+        }
+      ],
+      "series": []
+    },
+    "Q21": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Однозначно підтримую",
+              "value": 3
+            },
+            {
+              "label": "Скоріше підтримую",
+              "value": 5
+            },
+            {
+              "label": "Скоріше не підтримую",
+              "value": 11
+            },
+            {
+              "label": "Зовсім не підтримую",
+              "value": 78
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 3
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/68da49bd0a458a73700a6f32_rg_ua_1000_032022_v_press_compressed.pdf",
+          "location": "PDF, с. 23"
+        }
+      ],
+      "series": []
+    },
+    "Q22": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Заради збереження життя наших військових, цивільних, полонених та депортованих варто вести переговори з Росією про припинення війни",
+              "value": 23
+            },
+            {
+              "label": "Переговори про мир з Росією неможливі навіть заради врятування життів, бо Росія однаково не дотримується домовленостей",
+              "value": 59.6
+            },
+            {
+              "label": "Не згодний(а) з обома варіантами, важко відповісти",
+              "value": 17.4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://dif.org.ua/uploads/pdf/20263161126458f92b642fb0.79054584.pdf",
+          "location": "PDF, с. 27"
+        }
+      ],
+      "series": []
+    },
+    "Q23": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятною» + «Скоріше прийнятною»",
+              "value": 25.6
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятною» + «Зовсім неприйнятною»",
+              "value": 63.1
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 11.4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Лише серед прихильників будь-яких компромісів; не частка всього населення.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5218145164e3a68337c8b9.90610544.pdf",
+          "location": "PDF, с. 18, 19"
+        }
+      ],
+      "series": []
+    },
+    "Q24": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятною» + «Скоріше прийнятною»",
+              "value": 4.7
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятною» + «Зовсім неприйнятною»",
+              "value": 90.4
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 4.9
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Опубліковані агрегати прийнятності; округлення збережено.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5218145164e3a68337c8b9.90610544.pdf",
+          "location": "PDF, с. 18, 19"
+        }
+      ],
+      "series": []
+    },
+    "Q041": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Потрібно продовжувати збройну відсіч російській агресії, навіть якщо обстріли українських міст продовжаться",
+              "value": 86
+            },
+            {
+              "label": "Потрібно перейти до переговорів для якнайшвидшого припинення обстрілу міст, навіть якщо для цього доведеться піти на поступки росії",
+              "value": 10
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Суми повної та часткової згоди з обраним твердженням; невизначені не показані.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1151&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q045": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Крок до справжнього завершення війни на прийнятних для України умовах",
+              "value": 18
+            },
+            {
+              "label": "Сума відповідей: «Спосіб показати, що Росія не хоче миру або що Росія завжди порушує домовленості» + «Спосіб розблокувати військову допомогу від США»",
+              "value": 59
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Частки серед усіх опитаних, не серед прихильників перемир’я. Інші відповіді не показані.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1509&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q064": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Так",
+              "value": 61
+            },
+            {
+              "label": "Ні",
+              "value": 10
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Серед усіх опитаних. 86%/14% серед тих, хто обрав голосування, — інша база.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1594&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q069": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "се одно продовжувати збройний опір російській агресії, навіть якщо частина людей змушена буде певний час провести без світла, тепла, каналізації",
+              "value": 77
+            },
+            {
+              "label": "іти на будь-які вимоги Росії, щоб люди могли мати світло, тепло, каналізацію, навіть якщо ці вимоги будуть виглядати як поразка України",
+              "value": 12
+            },
+            {
+              "label": "Сума відповідей: «ВАЖКО СКАЗАТИ (НЕ ЗАЧИТУВАТИ)» + «ВІДМОВА ВІДПОВІДАТИ (НЕ ЗАЧИТУВАТИ)»",
+              "value": 11
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1634&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q076": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Варто погоджуватися",
+              "value": 8
+            },
+            {
+              "label": "Не варто погоджуватися",
+              "value": 78
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/gotovnist-gromadian-ukrainy-do-postupok-zarady-prypynennia-viiny-liutyi-berezen-2025r",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q077": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Варто погоджуватися",
+              "value": 5
+            },
+            {
+              "label": "Не варто погоджуватися",
+              "value": 81.9
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/gotovnist-gromadian-ukrainy-do-postupok-zarady-prypynennia-viiny-liutyi-berezen-2025r",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q078": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Варто погоджуватися",
+              "value": 7
+            },
+            {
+              "label": "Не варто погоджуватися",
+              "value": 78
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://razumkov.org.ua/napriamky/sotsiologichni-doslidzhennia/gotovnist-gromadian-ukrainy-do-postupok-zarady-prypynennia-viiny-liutyi-berezen-2025r",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": []
+    },
+    "Q087": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Заради миру варто йти на будь-які компроміси",
+              "value": 6
+            },
+            {
+              "label": "Війна може припинитися лише у разі перемоги",
+              "value": 51
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://oporaua.org/viyna/analitichnii-zvit-za-pidsumkami-opituvannia-viina-mir-peremoga-maibutnie-24828",
+          "location": "Додаток, питання 15"
+        }
+      ],
+      "series": []
+    },
+    "Q088": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Переговори про мир можливі навіть зараз",
+              "value": 10
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://oporaua.org/viyna/analitichnii-zvit-za-pidsumkami-opituvannia-viina-mir-peremoga-maibutnie-24828",
+          "location": "Додаток, питання 25–28"
+        },
+        {
+          "rows": [
+            {
+              "label": "Визнання окупованих територій України частиною Російської Федерації",
+              "value": 6
+            },
+            {
+              "label": "Відмова від вступу в НАТО",
+              "value": 14
+            },
+            {
+              "label": "Відмова від вступу в Європейський Союз",
+              "value": 14
+            }
+          ],
+          "unit": "percent",
+          "heading": "Уявимо, що Росія висуває низку вимог до України в обмін на припинення агресії, Скажіть, наскільки для Вас особисто є прийнятними наступні вимоги:",
+          "caption": "Для кожної вимоги — сума «Повністю прийнятним» і «Скоріше прийнятним». Інші категорії не показані.",
+          "source_url": "https://oporaua.org/viyna/analitichnii-zvit-za-pidsumkami-opituvannia-viina-mir-peremoga-maibutnie-24828",
+          "location": "Додаток, питання 25–28"
+        }
+      ],
+      "series": []
+    },
+    "Q089": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятно» + «Скоріше прийнятно»",
+              "value": 9
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятно» + «Повністю неприйнятно»",
+              "value": 81
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://dif.org.ua/uploads/pdf/26101812866cf7edc6d9ab6.77981420.pdf",
+          "location": "PDF, с. 6"
+        }
+      ],
+      "series": []
+    },
+    "Q092": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятним» + «Скоріше прийнятним»",
+              "value": 13.4
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятним» + «Повністю неприйнятним»",
+              "value": 75.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5533763386950345db5eb76.75679733.pdf",
+          "location": "PDF, с. 12"
+        }
+      ],
+      "series": []
+    },
+    "Q093": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятним» + «Скоріше прийнятним»",
+              "value": 34.7
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятним» + «Повністю неприйнятним»",
+              "value": 50.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5533763386950345db5eb76.75679733.pdf",
+          "location": "PDF, с. 12"
+        }
+      ],
+      "series": []
+    },
+    "Q094": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятним» + «Скоріше прийнятним»",
+              "value": 20
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятним» + «Повністю неприйнятним»",
+              "value": 69.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5533763386950345db5eb76.75679733.pdf",
+          "location": "PDF, с. 13"
+        }
+      ],
+      "series": []
+    },
+    "Q095": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Повністю прийнятним» + «Скоріше прийнятним»",
+              "value": 22.3
+            },
+            {
+              "label": "Сума відповідей: «Скоріше неприйнятним» + «Повністю неприйнятним»",
+              "value": 60.5
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Показано лише значення, внесені до реєстру; решту не обчислено як залишок.",
+          "source_url": "https://dif.org.ua/uploads/pdf/5533763386950345db5eb76.75679733.pdf",
+          "location": "PDF, с. 13"
+        }
+      ],
+      "series": []
+    },
+    "Q090": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Продовжувати війну, незважаючи ні на що",
+              "value": 21.3
+            },
+            {
+              "label": "Намагатися заморозити конфлікт, але не робити поступок Росії",
+              "value": 23.5
+            },
+            {
+              "label": "Почати переговори з Росією задля припинення війни",
+              "value": 34.7
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 20.5
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://dif.org.ua/uploads/pdf/26101812866cf7edc6d9ab6.77981420.pdf",
+          "location": "PDF, с. 12"
+        }
+      ],
+      "series": []
+    },
+    "Q091": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Так",
+              "value": 72.8
+            },
+            {
+              "label": "Ні",
+              "value": 7.1
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 20.1
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://dif.org.ua/uploads/pdf/131731465867691949dc0107.85784408.pdf",
+          "location": "PDF, с. 19"
+        }
+      ],
+      "series": []
+    },
+    "Q096": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Yes",
+              "value": 43
+            },
+            {
+              "label": "No",
+              "value": 54
+            },
+            {
+              "label": "Difficult to answer",
+              "value": 3
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://assets.carnegieendowment.org/static/files/Carnegie_survey_Ukraine_war_Ukrainian_public_opinion_March_2024.pdf",
+          "location": "PDF, с. 16"
+        }
+      ],
+      "series": []
+    },
+    "Q107": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Поступове зняття санкцій з Росії",
+              "value": 2.5
+            },
+            {
+              "label": "Відведення військ ЗСУ з частини Донецької області, яку вони зараз контролюють",
+              "value": 2.9
+            },
+            {
+              "label": "Відновлення прав Української православної церкви Московського патріархату",
+              "value": 3
+            },
+            {
+              "label": "Визнання де-факто Криму, Луганської і Донецької областей російськими, без визнання де-юре",
+              "value": 3.2
+            },
+            {
+              "label": "Обмеження чисельності Збройних Сил України до 800 тис.",
+              "value": 3.3
+            },
+            {
+              "label": "Замороження кордонів Херсонської і Запорізької областей по лінії зіткнення",
+              "value": 3.4
+            },
+            {
+              "label": "Визнання російської мови офіційною в деяких регіонах України",
+              "value": 3.6
+            },
+            {
+              "label": "Збереження без’ядерного статусу України",
+              "value": 4.1
+            },
+            {
+              "label": "Відмова від розміщення військ НАТО на території України",
+              "value": 4.3
+            },
+            {
+              "label": "Відмова від членства України в НАТО",
+              "value": 4.6
+            },
+            {
+              "label": "Проведення президентських і парламентських виборів протягом 100 днів після припинення вогню",
+              "value": 6.2
+            }
+          ],
+          "unit": "mean10",
+          "heading": "",
+          "caption": "Середні бали, шкала 1–10. Джерело: с. 20; це не відсотки підтримки.",
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2025/12/Present_UA_Barometr_F2F_n2000_December_2025.pdf",
+          "location": "PDF, с. 20"
+        }
+      ],
+      "series": []
+    },
+    "Q108": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "ВВ/ ВІДМОВА/ НЕ ЗНАЮ",
+              "value": 8.4
+            },
+            {
+              "label": "Відновлення суверенітету України в кордонах на початок 2022 року",
+              "value": 9.4
+            },
+            {
+              "label": "Підписання мирної угоди з визнанням втрати територій Донбасу і Криму",
+              "value": 11.7
+            },
+            {
+              "label": "Відновлення суверенітету України в кордонах 1991 року",
+              "value": 14.8
+            },
+            {
+              "label": "Війна в Україні триватиме, поки не зміниться політична ситуація в Росії",
+              "value": 21
+            },
+            {
+              "label": "Припинення бойових дій по лінії розмежування і тривалий дипломатичний процес по відновленню суверенітету України",
+              "value": 34.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://socis.kiev.ua/wp-content/uploads/2026/08/Present_UA_Barometr_F2F_n2000_August_2026.pdf",
+          "location": "PDF, с. 49"
+        }
+      ],
+      "series": []
+    },
+    "Q109": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Повернення всіх територій у кордонах 1991 року",
+              "value": 54
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Назва — переказ аналітичної категорії авторів. Дослівне питання та повна шкала не опубліковані.",
+          "source_url": "https://bunny-wp-pullzone-a7uhvox9dj.b-cdn.net/wp-content/uploads/2025/04/ConfMemo_AlexseevDembitskyi_final.pdf",
+          "location": "PDF, с. 2, 3"
+        }
+      ],
+      "series": []
+    },
+    "Q110": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Повернення всіх територій у кордонах 1991 року",
+              "value": 52
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Назва — переказ аналітичної категорії авторів. Дослівне питання та повна шкала не опубліковані.",
+          "source_url": "https://bunny-wp-pullzone-a7uhvox9dj.b-cdn.net/wp-content/uploads/2025/04/ConfMemo_AlexseevDembitskyi_final.pdf",
+          "location": "PDF, с. 2, 3"
+        }
+      ],
+      "series": []
+    },
+    "Q111": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Підтримують припинення війни через переговори",
+              "value": 63
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Переказ категорії авторів; після самітів. Повної шкали в публікації немає.",
+          "source_url": "https://bunny-wp-pullzone-a7uhvox9dj.b-cdn.net/wp-content/uploads/2025/04/ConfMemo_AlexseevDembitskyi_final.pdf",
+          "location": "PDF, с. 2, 3"
+        },
+        {
+          "rows": [
+            {
+              "label": "До самітів",
+              "value": 3.45
+            },
+            {
+              "label": "Після самітів",
+              "value": 3.77
+            }
+          ],
+          "unit": "mean5",
+          "heading": "",
+          "caption": "Парна база n=437, середній бал за шкалою 1–5. Підписи точок — періоди, не опції анкети.",
+          "source_url": "https://bunny-wp-pullzone-a7uhvox9dj.b-cdn.net/wp-content/uploads/2025/04/ConfMemo_AlexseevDembitskyi_final.pdf",
+          "location": "PDF, с. 2, 3"
+        }
+      ],
+      "series": []
+    },
+    "Q115": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Так, повинна погодитись без будь-яких умов",
+              "value": 2
+            },
+            {
+              "label": "Так, але лише за умови надання Україні гарантій безпеки",
+              "value": 83
+            },
+            {
+              "label": "Не повинна погоджуватись за жодних умов",
+              "value": 11
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/68cbec9ad857580e525af216_RG_Ukraine_Monitoring_Leaders_CATI_022025%20press.pdf",
+          "location": "PDF, с. 20"
+        }
+      ],
+      "series": []
+    },
+    "Q116": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Так",
+              "value": 74
+            },
+            {
+              "label": "Ні",
+              "value": 22
+            },
+            {
+              "label": "Важко відповісти",
+              "value": 4
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/689f246624b24443d395d4fc_rg_ukraine_monitoring_cati_052025_press%20(1).pdf",
+          "location": "PDF, с. 4"
+        }
+      ],
+      "series": []
+    },
+    "Q117": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Yes",
+              "value": 43
+            },
+            {
+              "label": "No",
+              "value": 55
+            },
+            {
+              "label": "Difficult to answer",
+              "value": 1
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://cdn.prod.website-files.com/685c279caf66f4023ad2cab4/6989b84ada2a261a313700c4_presentation_poll_results_in_ukraine_compressed.pdf",
+          "location": "PDF, с. 20"
+        }
+      ],
+      "series": []
+    },
+    "Q127": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "повернення до державних кордонів 1991 року, включно з Донбасом і Кримом, повна і безумовна капітуляція країни-агресора",
+              "value": 35.4
+            },
+            {
+              "label": "повернення під український контроль територій, окупованих після 24 лютого 2022 р.",
+              "value": 20.1
+            },
+            {
+              "label": "припинення вогню та відведення військ обох сторін від лінії зіткнення",
+              "value": 16.1
+            },
+            {
+              "label": "заморожування конфлікту по нинішній лінії зіткнення з наданням Україні надійних гарантій безпеки без формального членства в НАТО",
+              "value": 11.1
+            },
+            {
+              "label": "«обмін територіями»: Росія отримує контроль над Донецькою і Луганською областями в їхніх адміністративних кордонах, Україна повертає собі контроль над деякими з інших окупованих територій",
+              "value": 7.6
+            },
+            {
+              "label": "інше",
+              "value": 0.9
+            },
+            {
+              "label": "важко відповісти",
+              "value": 8.8
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://ispp.org.ua/wp-content/uploads/2026/01/dovidnikchunikhina2025.pdf",
+          "location": "PDF, с. 114"
+        }
+      ],
+      "series": []
+    },
+    "Q136": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "В межах нинішньої лінії фронту",
+              "value": 32
+            },
+            {
+              "label": "Україна збереже усі свої території, які мала у 1991 році",
+              "value": 31
+            },
+            {
+              "label": "Україна поверне території, які були підконтрольні до початку війни (до 24 лютого 2022 року)",
+              "value": 16
+            },
+            {
+              "label": "Україна поверне Донбас, але не Крим",
+              "value": 7
+            },
+            {
+              "label": "Україна поверне Крим, але без так званих ДНР та ЛНР",
+              "value": 5
+            },
+            {
+              "label": "Україна буде повністю окупована росією",
+              "value": 1
+            },
+            {
+              "label": "Інше",
+              "value": 3
+            },
+            {
+              "label": "Важко відповісти/Немає відповіді",
+              "value": 7
+            }
+          ],
+          "unit": "percent",
+          "heading": "",
+          "caption": "Наведено всі опубліковані категорії; округлення збережено.",
+          "source_url": "https://www.iri.org/wp-content/uploads/2026/06/UKR-26-NS-02-PT-UA-Public.pdf",
+          "location": "PDF, с. 17"
+        }
+      ],
+      "series": []
+    },
+    "Q25": {
+      "plots": [
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 44
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 44
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна відмовляється від вступу до НАТО, немає миротворців і додаткової зброї. Водночас Росія стверджує, що не буде більше нападати",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 47
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 43
+            }
+          ],
+          "unit": "percent",
+          "heading": "Членство України в НАТО відкладається на 10-20 років. Водночас в Україні розміщуються Західні миротворці",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 54
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 35
+            }
+          ],
+          "unit": "percent",
+          "heading": "Членство України в НАТО відкладається на 10-20 років. Водночас Україна у великих обсягах отримує всю зброю: ППО, літаки, танки тощо",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 49
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 38
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна стає членом НАТО",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 42
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 45
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна відмовляється від вступу до ЄС",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 55
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 34
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна стає членом ЄС",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 38
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 51
+            }
+          ],
+          "unit": "percent",
+          "heading": "Росія зберігає контроль над усіма окупованими територіями",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 50
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 38
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна повертає контроль над усією Херсонщиною і Запоріжжям, Росія контролює Донбас і Крим",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 57
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 30
+            }
+          ],
+          "unit": "percent",
+          "heading": "Україна повертає контроль над усіма своїми територіями, зокрема, над Кримом і Донбасом",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 41
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 48
+            }
+          ],
+          "unit": "percent",
+          "heading": "Російська мова стає другою державною",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 55
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 32
+            }
+          ],
+          "unit": "percent",
+          "heading": "Українська мова лишається єдиною державною і офіційною",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 37
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 50
+            }
+          ],
+          "unit": "percent",
+          "heading": "Надалі Україна має погоджувати всі важливі рішення з Росією",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        },
+        {
+          "rows": [
+            {
+              "label": "Сума відповідей: «Я легко погоджуюся на цей варіант» + «Це буде важкий варіант, але загалом прийнятний»",
+              "value": 59
+            },
+            {
+              "label": "Цей варіант зовсім неприйнятний",
+              "value": 30
+            }
+          ],
+          "unit": "percent",
+          "heading": "Надалі Україна може ухвалювати будь-які рішення без контролю з боку Росії",
+          "caption": "Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.",
+          "source_url": "https://www.kiis.com.ua/?cat=reports&id=1506&lang=ukr",
+          "location": "Публікація видавця"
+        }
+      ],
+      "series": [],
+      "note": "Показано 13 рівнів п’яти параметрів із таблиці 1. Окремі 96 комбінацій мали лише 11–30 відповідей; для них автори не вважають оцінки статистично надійними."
+    }
+  },
+  "reviewed_on": "2026-10-05"
+}

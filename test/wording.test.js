@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {SERIES} from '../series.js';
 import {indexWording,wordingKey,answerText,basisLabel} from '../wording.js';
 const read=name=>JSON.parse(fs.readFileSync(new URL('../data/'+name,import.meta.url),'utf8'));
-const data=read('research.json'),wording=read('wording.json'),index=indexWording(wording.items);
+const data=read('research.json'),wording=read('wording.json'),more=read('more-charts.json'),index=indexWording([...wording.items,...more.wording]);
 test('Every plotted measurement has a source-specific question and answer mapping',()=>{
  const series=new Set(SERIES.map(s=>s.id));
  for(const row of data.dynamics.filter(r=>series.has(r.series))){

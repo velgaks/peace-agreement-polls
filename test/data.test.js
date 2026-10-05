@@ -8,7 +8,7 @@ test('All public figures retain valid survey and source references',()=>{
  const p=new Set(d.polls.map(r=>r.id)),s=new Set(d.sources.map(r=>r.id));
  for(const r of [...d.dynamics,...d.crosses,...d.questions]){assert(p.has(r.poll));assert(s.has(r.source));}
  for(const r of [...d.dynamics,...d.crosses])assert(Number.isFinite(r.pct)&&r.pct>=0&&r.pct<=1);
- assert.equal(SERIES.length,12);
+ assert.equal(SERIES.length,23);
  for(const series of SERIES){const rs=d.dynamics.filter(r=>r.series===series.id);assert(waves(rs).length>=2);const keys=rs.map(r=>r.poll+'|'+r.sort+'|'+r.answer);assert.equal(new Set(keys).size,keys.length);}
 });
 test('Two January Donbas measurements remain distinct',()=>{
