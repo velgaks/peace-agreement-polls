@@ -2,6 +2,7 @@ import {unique,esc,pct,timeValue,waves,segments,csv,mainSource} from './lib.js';
 import {SERIES} from './series.js';
 import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
+import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
 const $=id=>document.getElementById(id);
 const COLORS=['#2a78d6','#eb6834','#52514e','#0d366b','#898781','#5598e7','#ab542d','#496179'];
 const DASH=['','7 3','2 3','10 3 2 3','4 4','1 3','12 3','8 3 1 3'];
@@ -25,7 +26,8 @@ const wordingURL=(item,label='Формулювання ↗')=>`<a href="${esc(it
   if(!item)return '<p class="small muted">Дослівне питання та повний перелік опцій ще не звірено з першоджерелом.</p>';
   const list=values=>`<ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`;
   const scale=(values,label='Варіанти відповіді')=>values.length?`<details class="wording-options"><summary>${label} (${values.length})</summary>${list(values)}</details>`:'';
-  return `${includeQuestion&&item.question?`<p class="verbatim">${esc(questionText(item))}</p>`:''}
+  return `${includeQuestion&&item.question?`<p class="verbatim">${esc(item.question)}</p>${scenarioHTML(item)}`:''}
+   ${experimentHTML(item)}
    ${item.statements?`<p class="small">Твердження / сценарії, кожен оцінюється окремо:</p>${list(item.statements)}`:''}
    ${scale(item.options)}${item.instructions?`<p class="small verbatim">${esc(item.instructions)}</p>`:''}
    ${(item.followups||[]).map(f=>`<p class="verbatim">${esc(f.question)}</p>${list(f.statements||[])}${scale(f.options)}`).join('')}
@@ -95,7 +97,7 @@ function renderQuestions(){
  const term=$('question-search').value.toLocaleLowerCase('uk'),dim=$('dimension-filter').value;
  const rows=data.questions.filter(q=>(!dim||q.dimension===dim)&&($('question-priority').value==='all'||mainSource(polls[q.poll]))&&(/^p\d{2,3}$/.test(term)?q.poll.toLowerCase()===term:JSON.stringify({...q,wording:wordingIndex.byQuestion.get(q.id),pollster:polls[q.poll].pollster,commissioner:polls[q.poll].commissioner}).toLocaleLowerCase('uk').includes(term)));
  $('question-count').textContent=`Показано ${rows.length} із ${data.questions.length} питань. Графіки доступні для кожного запису.`;
- $('question-list').innerHTML=rows.map(q=>{const p=polls[q.poll],exact=wordingIndex.byQuestion.get(q.id);const values=exact?data.dynamics.filter(r=>r.series===exact.series&&r.poll===q.poll):[];const result=values.length?values.map(r=>pct(r.pct)+' — '+answerText(exact,r.answer)).join('; '):q.result;return `<article class="record"><div class="record-side"><strong>${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(q.dimension)}</span></div><div><h3>${esc(exact?.question?questionText(exact):q.scenario)}</h3>${exact?`<p class="small muted">${esc(basisLabel(exact))}${exact.basis==='unavailable'?' · Заголовок — тематичний опис, не цитата.':''}</p>`:'<p class="small muted">Тематичний опис; дослівне формулювання ще не звірено.</p>'}<p class="result">${values.length?'':'<span class="small muted">Результат (переказ): </span>'}${esc(result)}</p><p class="small muted">База: ${esc(q.base)}</p>${questionChartsHTML(q.id,moreCharts.questions[q.id],p)}<details class="detail"><summary>Опції, примітки та джерело</summary><div class="detail-body">${wordingHTML(exact,false)}<p>${esc(q.limit)}</p><p>${exact?wordingURL(exact)+' · ':''}${sourceLink(q.source,'Оригінал: '+q.location)}</p></div></details><div class="record-links"><a href="#catalog?poll=${q.poll}">Паспорт ${q.poll}</a>${sourceLink(q.source,q.location+' ↗')}</div></div></article>`;}).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
+ $('question-list').innerHTML=rows.map(q=>{const p=polls[q.poll],exact=wordingIndex.byQuestion.get(q.id);const values=exact?data.dynamics.filter(r=>r.series===exact.series&&r.poll===q.poll):[];const result=values.length?values.map(r=>pct(r.pct)+' — '+answerText(exact,r.answer)).join('; '):q.result;return `<article class="record"><div class="record-side"><strong>${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(q.dimension)}</span></div><div>${questionContentHTML(q,exact)}<p class="result">${values.length?'':'<span class="small muted">Результат (переказ): </span>'}${esc(result)}</p><p class="small muted">База: ${esc(q.base)}</p><details class="detail"><summary>${exact?.experiment_dimensions?'Опції, параметри експерименту та джерело':'Опції, примітки та джерело'}</summary><div class="detail-body">${wordingHTML(exact,false)}<p>${esc(q.limit)}</p><p>${exact?wordingURL(exact)+' · ':''}${sourceLink(q.source,'Оригінал: '+q.location)}</p></div></details>${questionChartsHTML(q.id,moreCharts.questions[q.id],p)}<div class="record-links"><a href="#catalog?poll=${q.poll}">Паспорт ${q.poll}</a>${sourceLink(q.source,q.location+' ↗')}</div></div></article>`;}).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
  $('question-list').querySelectorAll('[data-question-csv]').forEach(button=>button.onclick=()=>{
   const id=button.dataset.questionCsv,q=data.questions.find(q=>q.id===id);download(id+'.csv',csv(questionChartRows(id,moreCharts.questions[id],wordingIndex.byQuestion.get(id),polls[q.poll],q.base)));
  });
@@ -117,7 +119,7 @@ function route(){
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=catalogue-2');if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=all-charts-1');if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
+  const wr=await fetch('data/wording.json?v=structured-1');if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=all-charts-1');if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
   const response=await fetch('data/research.json?v=all-charts-1');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
   $('dimension-filter').innerHTML=option('','Усі виміри')+unique(data.questions.map(q=>q.dimension)).sort((a,b)=>a.localeCompare(b,'uk')).map(d=>option(d,d)).join('');

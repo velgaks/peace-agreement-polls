@@ -21,7 +21,7 @@ for name in ['polls','questions','dynamics','crosses']:
             w=by_question[r['id']]
             r['scenario_summary']=r.pop('scenario')
             r['result_summary']=r.pop('result')
-            for key in ['question','prompt','options','instructions','statements','followups','partial_options','source_excerpt','basis','note','language','location','source_url','question_source_url','reviewed_on']:
+            for key in ['question','prompt','prompt_items','experiment_dimensions','options','instructions','statements','followups','partial_options','source_excerpt','basis','note','language','location','source_url','question_source_url','reviewed_on']:
                 value=w.get(key,'')
                 r['wording_'+key]=json.dumps(value,ensure_ascii=False) if isinstance(value,(list,dict)) else value
     fields=list(dict.fromkeys(k for r in rows for k in r))

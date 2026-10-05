@@ -23,6 +23,7 @@
 Оновлення з вихідного реєстру:
 
 ```sh
+python scripts/structure_wording.py /path/to/peace-agreement-polls-archive
 python scripts/export_data.py /path/to/research-data.json
 python scripts/build_more_charts.py /path/to/peace-agreement-polls-archive
 python scripts/build_previews.py
@@ -46,3 +47,5 @@ python -m http.server 8765 --bind 127.0.0.1
 Упорядкування та графіки: Valentyn Hatsko, [@gorbach_squad](https://t.me/gorbach_squad). Проєкт розвиває підхід [promarket-attitudes](https://github.com/velgaks/promarket-attitudes).
 
 Помилку у цифрі, джерелі чи формулюванні можна описати в [Issues](https://github.com/velgaks/peace-agreement-polls/issues), вказавши ID запису, сторінку та виправлення.
+
+Питання, сценарій та параметри експерименту зберігаються окремо. Для Q05 сценарій витягнуто з конкретної клітинки анкети; для Q25 — п’ять вимірів і 13 рівнів із матриці. Поля `prompt_items` і `experiment_dimensions` зберігають структуру списків у JSON та CSV.
