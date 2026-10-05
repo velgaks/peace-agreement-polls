@@ -18,7 +18,7 @@ export function segments(ws,answer){
 export function csv(rows){
   if(!rows.length)return '';
   const keys=unique(rows.flatMap(Object.keys));
-  const cell=v=>'"'+String(v??'').replace(/^[=+@]/,"'$&").replaceAll('"','""')+'"';
+  const cell=v=>'"'+(v!==null&&typeof v==='object'?JSON.stringify(v):String(v??'')).replace(/^[=+@]/,"'$&").replaceAll('"','""')+'"';
   return '\ufeff'+[keys,...rows.map(r=>keys.map(k=>r[k]))].map(r=>r.map(cell).join(',')).join('\r\n');
 }
 export const mainSource = poll => poll.priority.startsWith('Основне');

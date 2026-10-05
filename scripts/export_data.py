@@ -1,10 +1,14 @@
 """Export a supplied research register to the public, reproducible static bundle."""
 import argparse, csv, json, pathlib
+from poll_dates import normalize_periods
 root=pathlib.Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
 parser.add_argument('register',type=pathlib.Path)
 args=parser.parse_args()
 data=json.loads(args.register.read_text(encoding='utf-8'))
+for poll in data['polls']:
+    if 'fieldwork_periods' in poll:
+        normalize_periods(poll)
 # The public bundle contains references, not local archive paths or downloaded reports.
 data['sources']=[{'id':s['id'],'url':s['url']} for s in data['sources']]
 for key in ['dynamics','crosses']:
@@ -16,6 +20,11 @@ wording=json.loads((root/'data/wording.json').read_text(encoding='utf-8'))
 by_question={qid:w for w in wording['items'] for qid in w['question_ids']}
 for name in ['polls','questions','dynamics','crosses']:
     rows=[dict(r,source_url=sources.get(r.get('source'),'')) for r in data[name]]
+    if name=='polls':
+        for r in rows:
+            r['date_source_url']=sources.get(r.get('date_source'),'')
+            if 'fieldwork_periods' in r:
+                r['fieldwork_periods']=json.dumps(r['fieldwork_periods'],ensure_ascii=False)
     if name=='questions':
         for r in rows:
             w=by_question[r['id']]
