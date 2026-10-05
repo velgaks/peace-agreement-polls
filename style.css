@@ -9,3 +9,5 @@
 .chart-passport th:first-child{width:20%}.chart-passport th:last-child{width:22%}.chart-passport td:first-child{min-width:115px}
 
 .intro h1{font-size:clamp(32px,3vw,46px);letter-spacing:-.8px}.intro-side>p:first-child{font-family:var(--sans);font-size:17px;line-height:1.5}
+
+.verbatim{white-space:pre-line}.wording-basis{margin-top:10px}.legend-item{align-items:flex-start;max-width:100%}.legend-mark{flex-shrink:0;margin-top:8px}.wording-options{margin:12px 0}.wording-options summary{font-weight:500}.wording-options ul{padding-left:20px;margin:12px 0}.wording-options li+li{margin-top:9px}.chart-passport .small{margin-top:10px}.chart-passport th:first-child{width:16%}.chart-passport th:last-child{width:20%}.chart-passport td{border-bottom:1px solid var(--line)}
