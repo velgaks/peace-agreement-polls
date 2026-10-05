@@ -12,8 +12,18 @@ for key in ['dynamics','crosses']:
 (root/'data').mkdir(exist_ok=True)
 (root/'data/research.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 sources={s['id']:s['url'] for s in data['sources']}
+wording=json.loads((root/'data/wording.json').read_text(encoding='utf-8'))
+by_question={qid:w for w in wording['items'] for qid in w['question_ids']}
 for name in ['polls','questions','dynamics','crosses']:
     rows=[dict(r,source_url=sources.get(r.get('source'),'')) for r in data[name]]
+    if name=='questions':
+        for r in rows:
+            w=by_question[r['id']]
+            r['scenario_summary']=r.pop('scenario')
+            r['result_summary']=r.pop('result')
+            for key in ['question','prompt','options','instructions','statements','followups','partial_options','source_excerpt','basis','note','language','location','source_url','question_source_url','reviewed_on']:
+                value=w.get(key,'')
+                r['wording_'+key]=json.dumps(value,ensure_ascii=False) if isinstance(value,(list,dict)) else value
     fields=list(dict.fromkeys(k for r in rows for k in r))
     with (root/f'data/{name}.csv').open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)

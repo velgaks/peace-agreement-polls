@@ -20,10 +20,18 @@ const withURLs=rows=>rows.map(r=>({...r,source_url:source[r.source]?.url||''}));
 const option=(v,t)=>`<option value="${esc(v)}">${esc(t)}</option>`;
 const wordingFor=(series,poll)=>wordingIndex.byWave.get(wordingKey(series,poll));
 const wordingURL=(item,label='Формулювання ↗')=>`<a href="${esc(item.source_url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
-function wordingHTML(item,includeQuestion=true){
- if(!item)return '<p class="small muted">Дослівне питання та повний перелік опцій ще не звірено з першоджерелом.</p>';
- return `${includeQuestion?`<p class="verbatim">${esc(questionText(item))}</p>`:''}<details class="wording-options"><summary>Варіанти відповіді (${item.options.length})</summary><ul>${item.options.map(o=>`<li>${esc(o)}</li>`).join('')}</ul>${item.instructions?`<p class="small verbatim">${esc(item.instructions)}</p>`:''}</details><p class="small muted">${esc(basisLabel(item))}. ${esc(item.note)}</p>`;
-}
+ function wordingHTML(item,includeQuestion=true){
+  if(!item)return '<p class="small muted">Дослівне питання та повний перелік опцій ще не звірено з першоджерелом.</p>';
+  const list=values=>`<ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`;
+  const scale=(values,label='Варіанти відповіді')=>values.length?`<details class="wording-options"><summary>${label} (${values.length})</summary>${list(values)}</details>`:'';
+  return `${includeQuestion&&item.question?`<p class="verbatim">${esc(questionText(item))}</p>`:''}
+   ${item.statements?`<p class="small">Твердження / сценарії, кожен оцінюється окремо:</p>${list(item.statements)}`:''}
+   ${scale(item.options)}${item.instructions?`<p class="small verbatim">${esc(item.instructions)}</p>`:''}
+   ${(item.followups||[]).map(f=>`<p class="verbatim">${esc(f.question)}</p>${list(f.statements||[])}${scale(f.options)}`).join('')}
+   ${item.partial_options?scale(item.partial_options,'Лише опції, цитовані у публікації; перелік неповний'):''}
+   ${item.source_excerpt?`<p class="small">Опублікований фрагмент, не повне питання:</p><p class="verbatim">${esc(item.source_excerpt)}</p>`:''}
+   <p class="small muted">${esc(basisLabel(item))}. ${esc(item.note)}</p>`;
+ }
 const csvWording=rows=>withURLs(rows).map(r=>{const w=wordingFor(r.series,r.poll);return {...r,answer_key:r.answer,answer:answerText(w,r.answer),question_verbatim:w.question,prompt_verbatim:w.prompt,options_verbatim:JSON.stringify(w.options),interviewer_instructions:w.instructions,wording_basis:w.basis,wording_note:w.note,wording_source_url:w.source_url,question_source_url:w.question_source_url||w.source_url};});
 function renderSeriesList(){
  const term=$('series-search').value.toLocaleLowerCase('uk');
@@ -86,7 +94,7 @@ function renderQuestions(){
  const term=$('question-search').value.toLocaleLowerCase('uk'),dim=$('dimension-filter').value;
  const rows=data.questions.filter(q=>(!dim||q.dimension===dim)&&($('question-priority').value==='all'||mainSource(polls[q.poll]))&&(/^p\d{2,3}$/.test(term)?q.poll.toLowerCase()===term:JSON.stringify({...q,wording:wordingIndex.byQuestion.get(q.id),pollster:polls[q.poll].pollster,commissioner:polls[q.poll].commissioner}).toLocaleLowerCase('uk').includes(term)));
  $('question-count').textContent=`Показано ${rows.length} із ${data.questions.length} питань.`;
- $('question-list').innerHTML=rows.map(q=>{const p=polls[q.poll],exact=wordingIndex.byQuestion.get(q.id);const values=exact?data.dynamics.filter(r=>r.series===exact.series&&r.poll===q.poll):[];const result=values.length?values.map(r=>pct(r.pct)+' — '+answerText(exact,r.answer)).join('; '):q.result;return `<article class="record"><div class="record-side"><strong>${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(q.dimension)}</span></div><div><h3>${esc(exact?questionText(exact):q.scenario)}</h3>${exact?`<p class="small muted">${esc(basisLabel(exact))}</p>`:'<p class="small muted">Тематичний опис; дослівне формулювання ще не звірено.</p>'}<p class="result">${esc(result)}</p><p class="small muted">База: ${esc(q.base)}</p><details class="detail"><summary>Опції, примітки та джерело</summary><div class="detail-body">${wordingHTML(exact,false)}<p>${esc(q.limit)}</p><p>${esc(q.cluster)}</p><p>${exact?wordingURL(exact)+' · ':''}${sourceLink(q.source,'Оригінал: '+q.location)}</p></div></details><div class="record-links"><a href="#catalog?poll=${q.poll}">Паспорт ${q.poll}</a>${sourceLink(q.source,q.location+' ↗')}</div></div></article>`;}).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
+ $('question-list').innerHTML=rows.map(q=>{const p=polls[q.poll],exact=wordingIndex.byQuestion.get(q.id);const values=exact?data.dynamics.filter(r=>r.series===exact.series&&r.poll===q.poll):[];const result=values.length?values.map(r=>pct(r.pct)+' — '+answerText(exact,r.answer)).join('; '):q.result;return `<article class="record"><div class="record-side"><strong>${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(q.dimension)}</span></div><div><h3>${esc(exact?.question?questionText(exact):q.scenario)}</h3>${exact?`<p class="small muted">${esc(basisLabel(exact))}${exact.basis==='unavailable'?' · Заголовок — тематичний опис, не цитата.':''}</p>`:'<p class="small muted">Тематичний опис; дослівне формулювання ще не звірено.</p>'}<p class="result">${values.length?'':'<span class="small muted">Результат (переказ): </span>'}${esc(result)}</p><p class="small muted">База: ${esc(q.base)}</p><details class="detail"><summary>Опції, примітки та джерело</summary><div class="detail-body">${wordingHTML(exact,false)}<p>${esc(q.limit)}</p><p>${exact?wordingURL(exact)+' · ':''}${sourceLink(q.source,'Оригінал: '+q.location)}</p></div></details><div class="record-links"><a href="#catalog?poll=${q.poll}">Паспорт ${q.poll}</a>${sourceLink(q.source,q.location+' ↗')}</div></div></article>`;}).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
 }
 function renderCatalog(){
  const term=$('catalog-search').value.toLocaleLowerCase('uk'),year=$('year-filter').value,priority=$('priority-filter').value;
@@ -104,8 +112,8 @@ function route(){
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=verbatim-1');if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();wordingIndex=indexWording(wording.items);
-  const response=await fetch('data/research.json');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
+  const wr=await fetch('data/wording.json?v=catalogue-2');if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();wordingIndex=indexWording(wording.items);
+  const response=await fetch('data/research.json?v=catalogue-2');if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
   $('dimension-filter').innerHTML=option('','Усі виміри')+unique(data.questions.map(q=>q.dimension)).sort((a,b)=>a.localeCompare(b,'uk')).map(d=>option(d,d)).join('');
   $('year-filter').innerHTML=option('','Усі роки')+['2026','2025','2024','2023','2022'].map(y=>option(y,y)).join('');

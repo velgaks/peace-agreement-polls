@@ -16,4 +16,4 @@ export function answerText(item,key){
  return map.kind==='aggregate'?'Сума відповідей: '+texts.map(t=>'«'+t+'»').join(' + '):texts[0];
 }
 export const questionText=item=>[item.question,item.prompt].filter(Boolean).join('\n\n');
-export const basisLabel=item=>({questionnaire:'Текст анкети',report:'Текст зі звіту',retrospective:'Текст із ретроспективного графіка / таблиці',reference:'Текст іншої хвилі; анкету цього заміру не підтверджено','publication-language':'Англомовна публікація; українську анкету не підтверджено'}[item.basis]);
+export const basisLabel=item=>({questionnaire:'Текст анкети',report:'Текст зі звіту',retrospective:'Текст із ретроспективного графіка / таблиці',reference:'Текст іншої хвилі; анкету цього заміру не підтверджено','publication-language':'Англомовна публікація; українську анкету не підтверджено',unavailable:'Повне питання та шкалу не знайдено у відкритих джерелах'}[item.basis]);

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {SERIES} from '../series.js';
-import {indexWording,wordingKey,answerText} from '../wording.js';
+import {indexWording,wordingKey,answerText,basisLabel} from '../wording.js';
 const read=name=>JSON.parse(fs.readFileSync(new URL('../data/'+name,import.meta.url),'utf8'));
 const data=read('research.json'),wording=read('wording.json'),index=indexWording(wording.items);
 test('Every plotted measurement has a source-specific question and answer mapping',()=>{
@@ -35,4 +35,30 @@ test('Missing historical questionnaires and publication language stay explicit',
  assert.equal(index.byWave.get('GALLUP_NEGOTIATIONS|P05').language,'en');
  assert.equal(index.byWave.get('GALLUP_NEGOTIATIONS|P05').basis,'publication-language');
  for(const id of index.byQuestion.keys())assert(data.questions.some(q=>q.id===id));
+});
+
+test('Every catalogue record is audited; unavailable instruments are never fabricated',()=>{
+ assert.equal(index.byQuestion.size,data.questions.length);
+ const missing=[];
+ for(const q of data.questions){
+  const w=index.byQuestion.get(q.id);assert(w,q.id);assert(basisLabel(w));
+  assert.match(w.source_url,/^https:\/\//);assert(w.reviewed_on);
+  if(w.basis==='unavailable'){missing.push(q.id);assert.equal(w.question,'');assert.deepEqual(w.options,[]);assert(w.note);}
+  else {assert(w.question);assert(w.options.length||w.partial_options?.length);}
+ }
+ assert.deepEqual(missing,wording.review.missing_full_wording);
+});
+test('NDI retrospective records retain their own wave and only published scale fragments',()=>{
+ for(const [current,old] of [['Q13','Q137'],['Q14','Q138']]){
+  const a=index.byQuestion.get(current),b=index.byQuestion.get(old);
+  assert.notEqual(a.id,b.id);assert.deepEqual(a.polls,['P10']);assert.deepEqual(b.polls,['P117']);
+  assert.equal(a.options.length,5);assert.equal(b.basis,'retrospective');assert.equal(b.options.length,0);assert.equal(b.partial_options.length,2);
+ }
+});
+test('Batteries and bundled catalogue entries retain distinct statements and scales',()=>{
+ assert.equal(index.byQuestion.get('Q107').statements.length,11);
+ assert.equal(index.byQuestion.get('Q114').statements.length,3);
+ assert.equal(index.byQuestion.get('Q088').followups[0].statements.length,3);
+ assert.match(index.byQuestion.get('Q12').question,/КОНКРЕТНІ КРОКИ/);
+ assert.match(index.byQuestion.get('Q116').location,/4/);
 });
