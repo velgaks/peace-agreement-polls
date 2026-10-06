@@ -11,7 +11,7 @@ export function indexWording(items){
 export function answerText(item,key){
  const map=item?.mapping[key];
  if(!map)throw new Error('Missing source wording: '+key);
- if(map.kind==='reported')return map.label+' (категорія графіка видавця)';
+ if(map.kind==='reported')return map.label;
  const texts=map.indices.map(i=>{if(!item.options[i])throw new Error('Missing option');return item.options[i];});
  if(map.kind==='statement')return item.statements[map.statement_index]+' — '+texts[0];
  return map.kind==='aggregate'?'Сума відповідей: '+texts.map(t=>'«'+t+'»').join(' + '):texts[0];

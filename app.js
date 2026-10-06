@@ -1,6 +1,7 @@
 import {unique,esc,pct,timeValue,waves,segments,csv,mainSource} from './lib.js';
-import {SERIES} from './series.js?v=kiis-series-1';
-import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js';
+import {SERIES} from './series.js?v=packages-1';
+import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js?v=packages-1';
+import {packageRows,packagesHTML,packageCSVRows} from './packages.js?v=packages-1';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
 import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
 const $=id=>document.getElementById(id);
@@ -9,6 +10,7 @@ const DASH=['','7 3','2 3','10 3 2 3','4 4','1 3','12 3','8 3 1 3'];
 const TEXT={uk:{credit:'Графік: Valentyn Hatsko, TG: @gorbach_squad.',repo:'Дані, код і метод: github.com/velgaks/peace-agreement-polls',retrieved:'джерела зібрано у жовтні 2026'}};
 const T=TEXT.uk;
 let data,source,polls,wording,wordingIndex,moreCharts,selected=SERIES[0].id,currentRows=[],catalogRows=[];
+let packages,allPackages=[],visiblePackages=[];
 function sourceLink(id,label='Джерело ↗'){
  const url=source[id]?.url;return url&&/^https?:\/\//.test(url)?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`:'';
 }
@@ -117,19 +119,30 @@ function renderCatalog(){
  $('catalog-count').textContent=`Показано ${catalogRows.length} із ${data.polls.length} записів. Це не кількість незалежних вибірок.`;
  $('catalog-list').innerHTML=catalogRows.map(p=>`<article class="record"><div class="record-side"><strong>${esc(p.id)} · ${esc(p.pollster)}</strong><span>${esc(p.period)}</span><span class="badge">${esc(p.priority)}</span></div><div><h3>${esc(p.title)}</h3><p class="small muted">${esc(p.commissioner)} · n = ${esc(p.n||'не встановлено')} · ${esc(p.method||'не встановлено')}</p><details class="detail"><summary>Паспорт і межі інтерпретації</summary><dl><dt>Публікація</dt><dd>${esc(p.published||'Дату не встановлено')}</dd><dt>Охоплення</dt><dd>${esc(p.population||'Не встановлено')}</dd><dt>Обмеження</dt><dd>${esc(p.limits)}</dd><dt>Перевірка</dt><dd>${esc(p.check)}</dd><dt>Дати поля</dt><dd>${esc(p.date_note)} ${sourceLink(p.date_source,'Джерело дат ↗')}<br><span class="small muted">${esc(p.date_source_location)} · звірено ${esc(p.date_checked_on)}</span></dd></dl></details><div class="record-links">${sourceLink(p.source,'Публікація ↗')}${p.report?sourceLink(p.report,'Повний звіт ↗'):''}<a href="#conditions?poll=${p.id}">Питання цієї хвилі</a></div></div></article>`).join('')||'<p class="empty">За цими умовами нічого не знайдено.</p>';
 }
+function renderPackages(){
+ const poll=$('package-wave-filter').value,term=$('package-search').value.toLocaleLowerCase('uk');
+ visiblePackages=allPackages.filter(r=>(!poll||r.p.id===poll)&&(!term||(r.w.question+' '+r.w.prompt+' '+r.q.scenario).toLocaleLowerCase('uk').includes(term)));
+ $('package-count').textContent=`${visiblePackages.length} із ${allPackages.length} вимірювань пакетів. Повторні заміри мають посилання на часові ряди.`;
+ $('package-list').innerHTML=packagesHTML(visiblePackages);
+}
 function route(){
- const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
+ const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','packages','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
  document.querySelectorAll('section[id^="view-"]').forEach(s=>s.hidden=s.id!=='view-'+view);
  document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  if(view==='trends'){if(SERIES.some(s=>s.id===params.get('series')))selected=params.get('series');renderSeriesList();renderTrend();}
  if(view==='conditions'){if(params.has('poll')){$('question-search').value=params.get('poll');$('question-priority').value='all';$('dimension-filter').value='';}renderQuestions();}
  if(view==='catalog'){if(params.has('poll')){$('catalog-search').value=params.get('poll');$('year-filter').value='';$('priority-filter').value='all';}renderCatalog();}
+ if(view==='packages'){if(params.has('poll'))$('package-wave-filter').value=params.get('poll');renderPackages();}
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=kiis-series-1', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=kiis-series-1', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
-  const response=await fetch('data/research.json?v=kiis-series-1', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
+  const wr=await fetch('data/wording.json?v=packages-1', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=packages-1', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
+  const response=await fetch('data/research.json?v=packages-1', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('updated').textContent='Зріз даних: '+data.as_of.split('-').reverse().join('.');
+  const pr=await fetch('data/kiis-packages.json?v=packages-1',{cache:'no-cache'});if(!pr.ok)throw new Error('Packages HTTP '+pr.status);packages=await pr.json();allPackages=packageRows(packages,data,wordingIndex);
+  $('package-wave-filter').innerHTML=option('','Усі дати')+[...new Map(allPackages.map(r=>[r.p.id,r.p])).values()].map(p=>option(p.id,p.period)).join('');
+  $('package-wave-filter').onchange=renderPackages;$('package-search').oninput=renderPackages;
+  $('packages-csv').onclick=()=>download('kiis-packages.csv',csv(packageCSVRows(visiblePackages)));
   $('question-total').textContent=data.questions.length;
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
   $('dimension-filter').innerHTML=option('','Усі виміри')+unique(data.questions.map(q=>q.dimension)).sort((a,b)=>a.localeCompare(b,'uk')).map(d=>option(d,d)).join('');

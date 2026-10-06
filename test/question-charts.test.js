@@ -18,8 +18,8 @@ test('Every collected question has finite chart values, units, provenance and an
   assert.equal(questionChartRows(q.id,entry,index.byQuestion.get(q.id),poll,q.base).length,entry.plots.flatMap(p=>p.rows).length);
  }
 });
-test('All 27 registered time series have mappings and maintain source wording',()=>{
- assert.equal(SERIES.length,27);
+test('All 32 registered time series have mappings and maintain source wording',()=>{
+ assert.equal(SERIES.length,32);
  for(const meta of SERIES){const rows=data.dynamics.filter(r=>r.series===meta.id);assert(rows.length);for(const row of rows)assert(answerText(index.byWave.get(meta.id+'|'+row.poll),row.answer));}
  const old=index.byWave.get('SOCIS_CONCESSIONS_MULTI|P72');assert(!old.options.includes('ЖОДНИХ ПОСТУПОК'));
  assert(index.byWave.get('SOCIS_CONCESSIONS_MULTI|P74').options.includes('ЖОДНИХ ПОСТУПОК'));

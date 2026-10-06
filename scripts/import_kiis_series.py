@@ -133,7 +133,7 @@ for pid,sort,vals,source,location,basis,n,detail in endurance:
   detailed=[panel(detail,'Усі опубліковані окремі категорії. У часовому ряді місяці та пів року об’єднані; невизначені й відмови, якщо опубліковані окремо, тут розділені.')]
  qid=add(E,pid,sort,vals,source,location,'Q143',current='Q143' if pid=='P119' else None,basis=basis,note=note,base=f'База питання: n={n}' if n else 'База питання цієї історичної хвилі у звіреному релізі не наведена',question=question,detail=detailed)
  if detail and len(detail)==5:
-  audit['snapshots'][qid][0]['last_label']='Важко сказати (категорія графіка видавця)'
+  audit['snapshots'][qid][0]['last_label']='Важко сказати'
 
 d['as_of']='2026-10-06';w['review']['catalogue_total']=len(d['questions']);w['review']['date']='2026-10-06';w['checked_at']='2026-10-06'
 audit['series_counts']={m['id']:len({r['poll'] for r in d['dynamics'] if r['series']==m['id']}) for m in meta}
