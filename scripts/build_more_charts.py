@@ -70,6 +70,10 @@ for sid,name,qids,title in [('NDI_PEACE_PRICE_TERRITORY_REJECT','Визнанн�
  for q in qids:
   bind(sid,[qs[q]['poll']],byq[q],mapping(sid,[0,1,2,3,4]))
 
+# Audited KIIS series; each historical wave has its own wording object.
+kiis_audit=json.loads((R/'data/kiis-series-audit.json').read_text('utf8'))
+extra['series'].extend(kiis_audit['series'])
+
 # Snapshot charts refer to exact options, or explicitly labelled author aggregates.
 wave={(z['series'],p):z for z in w+extra['wording'] for p in z['polls']}
 def label(z,m):
@@ -132,15 +136,16 @@ for scenario,values in zip(byq['Q114']['statements'],[[82,11,7],[80,13,7],[45,37
 direct('Q115',[2,83,11,4],complete=True);direct('Q116',[74,22,4],complete=True);direct('Q117',[43,55,1],complete=True)
 direct('Q127',[35.4,20.1,16.1,11.1,7.6,.9,8.8],complete=True);direct('Q136',[32,31,16,7,5,1,3,7],complete=True)
 
-# KIIS September 2026: complete published categories, distinct from full questionnaire scales.
-for q,pairs in [
- ('Q139',[(0,47),(1,32),(2,5),(3,2),(4,14)]),
- ('Q140',[(0,41),(1,14),(2,4),(3,23),(4,12),(5,6)]),
- ('Q141',[([0,1],75),([2,3],21),(4,4)]),
- ('Q142',[([0,1],69),([2,3],22),(4,9)]),
- ('Q143',[([0,1],23),(2,4),(3,62),(4,11)])]:
- plot(q,pairs,caption='Усі опубліковані категорії. Об’єднані опції позначено як суму; відмову відповідати окремо не опубліковано. Округлення збережено.')
- extra['questions'][q]['plots'][0]['rows'][-1]['label']='Важко сказати (категорія графіка/таблиці видавця)'
+# The new ceasefire package is a separate snapshot, not a historical continuation.
+plot('Q142',[([0,1],69),([2,3],22),(4,9)],caption='Усі опубліковані категорії; суми градацій підтримки позначено. Відмови окремо не опубліковані.')
+extra['questions']['Q142']['plots'][0]['rows'][-1]['label']='Важко сказати (категорія графіка видавця)'
+# Preserve finer published distributions in question charts without duplicating
+# their aggregated categories as additional lines in the comparable time series.
+for q,panels in kiis_audit['snapshots'].items():
+ extra['questions'][q]['plots']=[]
+ for p in panels:
+  direct(q,p['values'],heading=p['heading'],caption=p['caption'])
+  if p.get('last_label'):extra['questions'][q]['plots'][-1]['rows'][-1]['label']=p['last_label']
 
 # The factorial experiment: publish parameter-level marginals, not 96 tiny groups.
 t=evidence('K25A',[]);html=BeautifulSoup((A/'sources'/sources['K25A']['file']).read_bytes(),'html.parser')

@@ -1,4 +1,4 @@
-import {MORE_SERIES} from './more-series.js';
+import {MORE_SERIES} from './more-series.js?v=kiis-series-1';
 // Titles are editorial; questions and answer labels come from the wording registry.
 export const SERIES=[
  {id:'KIIS_TERRITORY_GENERAL',name:'Територіальні поступки',org:'КМІС',title:'Відкидання територіальних поступок: 82% у 2022, 53% наприкінці 2025',question:'Вибір між поступками заради швидшого миру зі збереженням незалежності та відмовою від будь-яких територіальних поступок.',note:'Загальне питання не уточнює, які території та який правовий статус маються на увазі.',caption:'Загальне формулювання; фінальна груднева хвиля замінює попередню.',order:['Відкидають будь-які територіальні поступки','Допускають певні територіальні поступки','Не визначилися']},

@@ -1,5 +1,5 @@
 import {unique,esc,pct,timeValue,waves,segments,csv,mainSource} from './lib.js';
-import {SERIES} from './series.js';
+import {SERIES} from './series.js?v=kiis-series-1';
 import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
 import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
@@ -127,8 +127,8 @@ function route(){
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=kiis1639', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=kiis1639', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
-  const response=await fetch('data/research.json?v=kiis1639', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
+  const wr=await fetch('data/wording.json?v=kiis-series-1', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=kiis-series-1', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
+  const response=await fetch('data/research.json?v=kiis-series-1', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('updated').textContent='Зріз даних: '+data.as_of.split('-').reverse().join('.');
   $('question-total').textContent=data.questions.length;
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
