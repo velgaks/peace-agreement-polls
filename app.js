@@ -1,7 +1,7 @@
 import {unique,esc,pct,timeValue,waves,segments,csv,mainSource} from './lib.js';
-import {SERIES} from './series.js?v=packages-1';
-import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js?v=packages-1';
-import {packageRows,packagesHTML,packageCSVRows} from './packages.js?v=packages-1';
+import {SERIES} from './series.js?v=packages-comparison-2';
+import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js?v=packages-comparison-2';
+import {packageRows,packagesHTML,packageCSVRows,packageAcceptance} from './packages.js?v=packages-comparison-2';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
 import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
 const $=id=>document.getElementById(id);
@@ -122,8 +122,12 @@ function renderCatalog(){
 function renderPackages(){
  const poll=$('package-wave-filter').value,term=$('package-search').value.toLocaleLowerCase('uk');
  visiblePackages=allPackages.filter(r=>(!poll||r.p.id===poll)&&(!term||(r.w.question+' '+r.w.prompt+' '+r.q.scenario).toLocaleLowerCase('uk').includes(term)));
+ if($('package-sort').value==='accept')visiblePackages.sort((a,b)=>packageAcceptance(b)-packageAcceptance(a)||b.p.end.localeCompare(a.p.end));
  $('package-count').textContent=`${visiblePackages.length} із ${allPackages.length} вимірювань пакетів. Повторні заміри мають посилання на часові ряди.`;
  $('package-list').innerHTML=packagesHTML(visiblePackages);
+ $('package-list').querySelectorAll('[data-package]').forEach(button=>button.onclick=()=>{
+  const target=$('package-'+button.dataset.package);target.open=true;target.scrollIntoView({block:'start'});target.querySelector('summary').focus({preventScroll:true});
+ });
 }
 function route(){
  const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','packages','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
@@ -136,12 +140,13 @@ function route(){
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=packages-1', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=packages-1', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
-  const response=await fetch('data/research.json?v=packages-1', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
+  const wr=await fetch('data/wording.json?v=packages-comparison-2', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=packages-comparison-2', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
+  const response=await fetch('data/research.json?v=packages-comparison-2', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('updated').textContent='Зріз даних: '+data.as_of.split('-').reverse().join('.');
-  const pr=await fetch('data/kiis-packages.json?v=packages-1',{cache:'no-cache'});if(!pr.ok)throw new Error('Packages HTTP '+pr.status);packages=await pr.json();allPackages=packageRows(packages,data,wordingIndex);
+  const pr=await fetch('data/kiis-packages.json?v=packages-comparison-2',{cache:'no-cache'});if(!pr.ok)throw new Error('Packages HTTP '+pr.status);packages=await pr.json();allPackages=packageRows(packages,data,wordingIndex);
   $('package-wave-filter').innerHTML=option('','Усі дати')+[...new Map(allPackages.map(r=>[r.p.id,r.p])).values()].map(p=>option(p.id,p.period)).join('');
   $('package-wave-filter').onchange=renderPackages;$('package-search').oninput=renderPackages;
+  $('package-sort').onchange=renderPackages;
   $('packages-csv').onclick=()=>download('kiis-packages.csv',csv(packageCSVRows(visiblePackages)));
   $('question-total').textContent=data.questions.length;
   $('stats').innerHTML=`<div><strong>${SERIES.length}</strong><span>часових серій</span></div><div><strong>${data.polls.length}</strong><span>записів у каталозі</span></div><div><strong>${data.questions.length}</strong><span>питань і сценаріїв</span></div>`;
