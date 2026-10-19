@@ -1,5 +1,5 @@
 import {esc,pct} from './lib.js';
-import {answerText,basisLabel} from './wording.js?v=packages-1';
+import {answerText,basisLabel} from './wording.js?v=october-2026-1';
 import {scenarioHTML} from './question-content.js';
 
 export function packageRows(packages,data,index){
@@ -36,7 +36,8 @@ const SHORT={
  Q067:'Заморожування фронту; великі обсяги грошей і зброї',
  Q068:'Заморожування фронту; європейські війська відбивають напад',
  Q05:'Заморожування фронту; великі обсяги грошей і зброї',
- Q142:'Припинення вогню, зміцнення армії, рух до ЄС і НАТО'
+ Q142:'Припинення вогню, зміцнення армії, рух до ЄС і НАТО',
+ Q170:'Передача Донбасу в обмін на гарантії США і Європи'
 };
 const BUCKETS={easy:'Легко погоджуються',hard:'Важко, але прийнятно',support:'Підтримують загалом / «Так»',reject:'Відкидають / «Ні»',uncertain:'Важко сказати',refusal:'Відмова',abstain:'Не голосували би'};
 export function packageSegments(r){

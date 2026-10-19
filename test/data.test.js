@@ -8,12 +8,12 @@ test('All public figures retain valid survey and source references',()=>{
  const p=new Set(d.polls.map(r=>r.id)),s=new Set(d.sources.map(r=>r.id));
  for(const r of [...d.dynamics,...d.crosses,...d.questions]){assert(p.has(r.poll));assert(s.has(r.source));}
  for(const r of [...d.dynamics,...d.crosses])assert(Number.isFinite(r.pct)&&r.pct>=0&&r.pct<=1);
- assert.equal(SERIES.length,32);
+ assert.equal(SERIES.length,43);
  for(const series of SERIES){const rs=d.dynamics.filter(r=>r.series===series.id);assert(waves(rs).length>=2);const keys=rs.map(r=>r.poll+'|'+r.sort+'|'+r.answer);assert.equal(new Set(keys).size,keys.length);}
 });
 test('Two January Donbas measurements remain distinct',()=>{
  const ws=waves(d.dynamics.filter(r=>r.series==='KIIS_DONBAS_GUARANTEES_2026'));
- assert.equal(ws.length,6);assert.equal(ws.filter(w=>w.sort.startsWith('2026-01')).length,2);assert(ws[0].time<ws[1].time);
+ assert.equal(ws.length,7);assert.equal(ws.filter(w=>w.sort.startsWith('2026-01')).length,2);assert(ws[0].time<ws[1].time);
 });
 test('An absent option remains absent rather than becoming zero',()=>{
  const ws=waves(d.dynamics.filter(r=>r.series==='RAZUMKOV_MINIMUM_PEACE'));

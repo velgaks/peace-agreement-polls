@@ -75,6 +75,8 @@ kiis_audit=json.loads((R/'data/kiis-series-audit.json').read_text('utf8'))
 extra['series'].extend(kiis_audit['series'])
 packages=json.loads((R/'data/kiis-packages.json').read_text('utf8'))
 extra['series'].extend(packages['series'])
+latest_update=json.loads((R/'data/update-2026-10-19.json').read_text('utf8'))
+extra['series'].extend(latest_update['series'])
 
 # Snapshot charts refer to exact options, or explicitly labelled author aggregates.
 wave={(z['series'],p):z for z in w+extra['wording'] for p in z['polls']}
@@ -161,6 +163,8 @@ for labeltext,yes,no in experiment:
  assert labeltext in t
  plot('Q25',[([0,1],yes),(2,no)],heading=labeltext,caption='Прийнятність пакета з цим пунктом за рівної представленості інших умов. Не окремий ефект і не частка сталої групи.')
 extra['questions']['Q25']['note']='Показано 13 рівнів п’яти параметрів із таблиці 1. Окремі 96 комбінацій мали лише 11–30 відповідей; для них автори не вважають оцінки статистично надійними.'
+for q,panels in latest_update['snapshots'].items():
+ entry=extra['questions'].setdefault(q,dict(series=[],plots=[]));entry['plots']=panels
 assert set(extra['questions'])==set(qs),set(qs)-set(extra['questions'])
 for r in packages['records']:
  q=r['question_id'];z=byq[q]

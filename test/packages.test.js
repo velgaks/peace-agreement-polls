@@ -24,7 +24,7 @@ test('Published rounding conflicts and nonresponse are preserved rather than inf
  assert.equal(byq.get('Q142').series,undefined);
 });
 test('Package comparison, question charts and CSV use the same audited rows and full wording',()=>{
- assert.equal(rows.length,27);
+ assert.equal(rows.length,28);
  for(const r of rows){
   assert.equal(r.values.length,r.answers.length);
   assert.deepEqual(more.questions[r.q.id].plots[0].rows.map(p=>p.value),r.values);

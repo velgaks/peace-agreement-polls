@@ -6,11 +6,11 @@ const read=name=>JSON.parse(fs.readFileSync(new URL('../data/'+name,import.meta.
 const d=read('research.json'),w=read('wording.json'),a=read('kiis-series-audit.json'),more=read('more-charts.json');
 
 test('KIIS histories retain full comparable bins without duplicate wave categories',()=>{
- for(const [id,count,bins] of [['KIIS_WHO_WINS',6,5],['KIIS_REALISTIC_ENDING',5,6],['KIIS_ALLOW_NEGOTIATIONS',2,3],['KIIS_WAR_ENDURANCE',17,4]]){
+ for(const [id,count,bins] of [['KIIS_WHO_WINS',6,5],['KIIS_REALISTIC_ENDING',5,6],['KIIS_ALLOW_NEGOTIATIONS',2,3],['KIIS_WAR_ENDURANCE',18,4]]){
   const ws=waves(d.dynamics.filter(r=>r.series===id));assert.equal(ws.length,count);
   assert.equal(a.series_counts[id],count);
   for(const wave of ws){assert.equal(wave.rows.length,bins);assert.equal(new Set(wave.rows.map(r=>r.answer)).size,bins);}
-  assert.equal(ws.at(-1).poll,'P119');
+  assert.equal(ws.at(-1).poll,id==='KIIS_WAR_ENDURANCE'?'P128':'P119');
  }
 });
 

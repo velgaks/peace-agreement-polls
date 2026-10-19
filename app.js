@@ -1,11 +1,11 @@
 import {unique,esc,pct,timeValue,waves,segments,csv,mainSource} from './lib.js';
-import {SERIES} from './series.js?v=packages-comparison-2';
-import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js?v=packages-comparison-2';
-import {packageRows,packagesHTML,packageCSVRows,packageAcceptance} from './packages.js?v=packages-comparison-2';
+import {SERIES} from './series.js?v=october-2026-1';
+import {indexWording,wordingKey,answerText,questionText,basisLabel} from './wording.js?v=october-2026-1';
+import {packageRows,packagesHTML,packageCSVRows,packageAcceptance} from './packages.js?v=october-2026-1';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
 import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
 const $=id=>document.getElementById(id);
-const COLORS=['#2a78d6','#eb6834','#52514e','#0d366b','#898781','#5598e7','#ab542d','#496179'];
+const COLORS=['#2a78d6','#eb6834','#52514e','#0d366b','#898781','#5598e7','#ab542d','#496179','#1c5cab','#d95926','#3d4852'];
 const DASH=['','7 3','2 3','10 3 2 3','4 4','1 3','12 3','8 3 1 3'];
 const TEXT={uk:{credit:'Графік: Valentyn Hatsko, TG: @gorbach_squad.',repo:'Дані, код і метод: github.com/velgaks/peace-agreement-polls',retrieved:'джерела зібрано у жовтні 2026'}};
 const T=TEXT.uk;
@@ -14,7 +14,7 @@ let packages,allPackages=[],visiblePackages=[];
 function sourceLink(id,label='Джерело ↗'){
  const url=source[id]?.url;return url&&/^https?:\/\//.test(url)?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`:'';
 }
-const field=r=>{const p=polls[r.poll];return p?.start&&p?.end?p.period:r.period;};
+const field=r=>{const p=polls[r.poll];return p?.start&&p?.end?p.period+(p.wave_label?' · '+p.wave_label:''):r.period;};
 function dateNotes(rows){
  const seen=new Set();
  return unique(rows.map(r=>r.poll)).map(id=>polls[id]).filter(p=>p&&p.date_status!=='reported_day').map(p=>{
@@ -56,6 +56,7 @@ function chartSVG(meta,rs){
  const width=840,height=425,left=45,right=770,top=36,bottom=365;
  const min=ws[0].time,max=ws.at(-1).time;
  const x=t=>left+(t-min)/(max-min||1)*(right-left),y=v=>bottom-v*(bottom-top);
+ const pointX=r=>{const same=ws.filter(w=>w.time===r.time),i=same.findIndex(w=>w.poll===r.poll&&w.sort===r.sort);return x(r.time)+(i-(same.length-1)/2)*8;};
  let svg=`<svg id="trend-chart" class="chart-svg" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">${esc(meta.title)}</title><desc id="svg-desc">${esc(questionText(wordingFor(meta.id,ws.at(-1).poll)))} ${esc(meta.note)} Точні значення доступні на точках графіка та у CSV.</desc><g font-family="Source Sans 3, sans-serif" font-size="12" fill="#52514e">`;
  for(let v=0;v<=1.001;v+=.25){svg+=`<line x1="${left}" x2="${right}" y1="${y(v)}" y2="${y(v)}" stroke="#e1e0d9" stroke-width=".7"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`;}
  const span=max-min;
@@ -69,15 +70,18 @@ function chartSVG(meta,rs){
  answers.forEach((answer,i)=>{
   const color=COLORS[i%COLORS.length];const dash=DASH[i%DASH.length];
   segments(ws,answer).forEach(seg=>{
-   if(seg.length>1)svg+=`<polyline points="${seg.map(r=>`${x(r.time)},${y(r.pct)}`).join(' ')}" fill="none" stroke="${color}" stroke-width="2.2" stroke-dasharray="${dash}"/>`;
-   seg.forEach(r=>{const idx=rs.indexOf(rs.find(a=>a.poll===r.poll&&a.sort===r.sort&&a.answer===answer));const label=`${field(r)} · ${answerText(wordingFor(meta.id,r.poll),answer)}: ${pct(r.pct)}`;svg+=`<circle cx="${x(r.time)}" cy="${y(r.pct)}" r="4" fill="${color}" stroke="#fcfcfb" stroke-width="1.3" tabindex="0" data-point="${idx}" aria-label="${esc(label)}"><title>${esc(label)}</title></circle>`;});
+   if(seg.length>1)svg+=`<polyline points="${seg.map(r=>`${pointX(r)},${y(r.pct)}`).join(' ')}" fill="none" stroke="${color}" stroke-width="2.2" stroke-dasharray="${dash}"/>`;
+   seg.forEach(r=>{const idx=rs.indexOf(rs.find(a=>a.poll===r.poll&&a.sort===r.sort&&a.answer===answer));const label=`${field(r)} · ${answerText(wordingFor(meta.id,r.poll),answer)}: ${pct(r.pct)}`;svg+=`<circle cx="${pointX(r)}" cy="${y(r.pct)}" r="4" fill="${color}" stroke="#fcfcfb" stroke-width="1.3" tabindex="0" data-point="${idx}" aria-label="${esc(label)}"><title>${esc(label)}</title></circle>`;});
   });
   const end=ws.at(-1).rows.find(r=>r.answer===answer);if(end)endpoints.push({value:end.pct,color,yy:y(end.pct)});
  });
  endpoints.sort((a,b)=>a.yy-b.yy);let last=-Infinity;
- endpoints.forEach(e=>{e.labelY=Math.max(e.yy,last+20);last=e.labelY;});
- const overflow=Math.max(0,(endpoints.at(-1)?.labelY||0)-bottom);
- endpoints.forEach(e=>{const yy=e.labelY-overflow;svg+=`<line x1="${right+7}" x2="${right+18}" y1="${e.yy}" y2="${yy}" stroke="${e.color}"/><text class="end-value" x="${right+22}" y="${yy+5}" fill="#0b0b0b">${pct(e.value)}</text>`;});
+ const dense=endpoints.length>8,gap=dense?14:20;
+ endpoints.forEach(e=>{e.labelY=Math.max(e.yy,last+gap);last=e.labelY;});
+ // Move crowded labels back from the bottom without shifting isolated values.
+ let next=bottom+gap;
+ [...endpoints].reverse().forEach(e=>{e.labelY=Math.min(e.labelY,next-gap);next=e.labelY;});
+ endpoints.forEach(e=>{const yy=e.labelY;svg+=`<line x1="${right+7}" x2="${right+18}" y1="${e.yy}" y2="${yy}" stroke="${e.color}"/><text class="end-value" ${dense?'style="font-size:12px"':''} x="${right+22}" y="${yy+5}" fill="#0b0b0b">${pct(e.value)}</text>`;});
  return svg+'</g></svg>';
 }
 function renderTrend(){
@@ -85,9 +89,9 @@ function renderTrend(){
  currentRows=data.dynamics.filter(r=>r.series===selected).sort((a,b)=>timeValue(a.sort)-timeValue(b.sort));
  const ws=waves(currentRows),answers=meta.order||unique(currentRows.map(r=>r.answer));
  const latest=wordingFor(meta.id,ws.at(-1).poll);
- const legendAnswers=answers.map(a=>answerText(latest,a));
+ const legendAnswers=answers.map(a=>answerText([...ws].reverse().map(w=>wordingFor(meta.id,w.poll)).find(w=>w.mapping[a]),a));
  const passport=ws.map(w=>{const exact=wordingFor(meta.id,w.poll);const refs=[...new Map(w.rows.map(r=>[r.source+'|'+r.location,r])).values()];return `<tr><td>${esc(field(w.rows[0]))}</td><td>${wordingHTML(exact)}</td><td>${wordingURL(exact)}<br><span class="small muted">${esc(exact.location)}</span>${exact.question_source_url?`<br><a href="${esc(exact.question_source_url)}" target="_blank" rel="noopener">Питання в графіку ↗</a>`:''}<br>${refs.map(r=>sourceLink(r.source,'Числа: '+(r.location||'джерело'))).join('<br>')}<br>${sourceLink(polls[w.poll].date_source,'Дати поля ↗')}</td></tr>`;}).join('');
- $('chart-panel').innerHTML=`<div class="chart-meta"><span>${esc(meta.org)}</span><span>Заміри: ${ws.length} · ${ws[0].sort.slice(0,4)}–${ws.at(-1).sort.slice(0,4)}</span></div><h2 class="chart-title">${esc(meta.title)}</h2><p class="chart-subtitle verbatim">${esc(questionText(latest))}</p><p class="wording-basis small muted">${esc(basisLabel(latest))} · ${esc(field(ws.at(-1).rows[0]))} · ${wordingURL(latest,'Джерело формулювання ↗')}</p><div class="legend">${legendAnswers.map((a,i)=>`<span class="legend-item"><i class="legend-mark" style="border-color:${COLORS[i]};border-top-style:${i?'dashed':'solid'}"></i><span>${esc(a)}</span></span>`).join('')}</div><div class="chart-wrap">${chartSVG(meta,currentRows)}</div><div id="point-readout" class="point-readout" aria-live="polite">Натисніть точку або перейдіть до неї клавішею Tab, щоб побачити точне значення й опцію цієї хвилі.</div><div class="chart-credit">${esc(meta.caption)}<br><strong>${T.credit}</strong> Джерело: ${esc(meta.org)}; ${T.retrieved}.<br>${T.repo}</div><div class="chart-actions"><button id="trend-csv">Дані CSV ↓</button><button id="trend-svg">Графік SVG ↓</button><button id="share-series">Копіювати посилання ↗</button></div><details class="detail" open><summary>Примітки: формулювання та методика</summary><div class="detail-body"><p>${esc(meta.note)}</p><p>Над графіком — дослівне формулювання з джерела останнього заміру. Повний перелік опцій та версії попередніх хвиль — у паспорті. Суми відповідей позначені окремо.</p><p>${esc(latest.note)}</p>${dateNotes(currentRows)}</div></details><details class="detail"><summary>Паспорт графіка · заміри: ${ws.length}</summary><div class="table-wrap"><table class="chart-passport"><thead><tr><th>Дата</th><th>Питання та опції — дослівно з джерела</th><th>Джерело</th></tr></thead><tbody>${passport}</tbody></table></div></details>`;
+ $('chart-panel').innerHTML=`<div class="chart-meta"><span>${esc(meta.org)}</span><span>Заміри: ${ws.length} · ${ws[0].sort.slice(0,4)}–${ws.at(-1).sort.slice(0,4)}</span></div><h2 class="chart-title">${esc(meta.title)}</h2><p class="chart-subtitle verbatim">${esc(questionText(latest))}</p><p class="wording-basis small muted">${esc(basisLabel(latest))} · ${esc(field(ws.at(-1).rows[0]))} · ${wordingURL(latest,'Джерело формулювання ↗')}</p><div class="legend">${legendAnswers.map((a,i)=>`<span class="legend-item"><i class="legend-mark" style="border-color:${COLORS[i%COLORS.length]};border-top-style:${i?'dashed':'solid'}"></i><span>${esc(a)}</span></span>`).join('')}</div><div class="chart-wrap">${chartSVG(meta,currentRows)}</div><div id="point-readout" class="point-readout" aria-live="polite">Натисніть точку або перейдіть до неї клавішею Tab, щоб побачити точне значення й опцію цієї хвилі.</div><div class="chart-credit">${esc(meta.caption)}<br><strong>${T.credit}</strong> Джерело: ${esc(meta.org)}; ${T.retrieved}.<br>${T.repo}</div><div class="chart-actions"><button id="trend-csv">Дані CSV ↓</button><button id="trend-svg">Графік SVG ↓</button><button id="share-series">Копіювати посилання ↗</button></div><details class="detail" open><summary>Примітки: формулювання та методика</summary><div class="detail-body"><p>${esc(meta.note)}</p><p>Над графіком — формулювання з джерела останнього заміру; тип джерела вказано під ним. Повний перелік опцій та версії попередніх хвиль — у паспорті. Суми відповідей позначені окремо.</p><p>${esc(latest.note)}</p>${dateNotes(currentRows)}</div></details><details class="detail"><summary>Паспорт графіка · заміри: ${ws.length}</summary><div class="table-wrap"><table class="chart-passport"><thead><tr><th>Дата</th><th>Питання та опції — дослівно з джерела</th><th>Джерело</th></tr></thead><tbody>${passport}</tbody></table></div></details>`;
  $('chart-panel').querySelectorAll('[data-point]').forEach(p=>{const show=()=>{const r=currentRows[Number(p.dataset.point)];$('point-readout').innerHTML=`<strong>${esc(field(r))}</strong> · ${esc(answerText(wordingFor(meta.id,r.poll),r.answer))}: <strong>${pct(r.pct)}</strong> · ${sourceLink(r.source,r.location)}`;};p.onmouseenter=show;p.onfocus=show;p.onclick=show;});
  $('trend-csv').onclick=()=>download(meta.id+'.csv',csv(csvWording(currentRows)));
  $('trend-svg').onclick=()=>exportSVG(meta,legendAnswers,latest);
@@ -97,7 +101,7 @@ function lines(text,max=84){const result=[];let line='';for(const word of text.s
 function exportSVG(meta,answers,exact){
  let y=32,header='';for(const line of lines(meta.title,65)){header+=`<text x="25" y="${y}" font-size="23" font-weight="600">${esc(line)}</text>`;y+=30;}y+=8;
  for(const line of lines(questionText(exact),95)){header+=`<text x="25" y="${y}" font-size="13">${esc(line)}</text>`;y+=19;}y+=12;
- answers.forEach((a,i)=>{for(const [j,line] of lines(a,90).entries()){header+=`${j===0?`<line x1="25" x2="45" y1="${y-5}" y2="${y-5}" stroke="${COLORS[i]}" stroke-width="3" stroke-dasharray="${DASH[i]}"/>`:''}<text x="53" y="${y}" font-size="13">${esc(line)}</text>`;y+=19;}});
+ answers.forEach((a,i)=>{for(const [j,line] of lines(a,90).entries()){header+=`${j===0?`<line x1="25" x2="45" y1="${y-5}" y2="${y-5}" stroke="${COLORS[i%COLORS.length]}" stroke-width="3" stroke-dasharray="${DASH[i%DASH.length]}"/>`:''}<text x="53" y="${y}" font-size="13">${esc(line)}</text>`;y+=19;}});
  const chart=$('trend-chart').outerHTML.replace('class="chart-svg"','').replace('<svg ','<svg x="0" y="'+(y+5)+'" width="840" height="425" ');
  y+=455;let caption='';for(const l of ['Примітка. '+meta.note+' '+exact.note+' '+unique(currentRows.map(r=>polls[r.poll]).filter(p=>p.date_status!=='reported_day').map(p=>p.date_note)).join(' '),basisLabel(exact)+'. Формулювання: '+exact.source_url,T.credit+' Джерело: '+meta.org+'; жовтень 2026.',T.repo]){for(const line of lines(l,110)){caption+=`<text x="25" y="${y}" font-size="11">${esc(line)}</text>`;y+=16;}}
  const body=`<svg xmlns="http://www.w3.org/2000/svg" width="840" height="${y+15}" viewBox="0 0 840 ${y+15}"><rect width="100%" height="100%" fill="#fcfcfb"/><g fill="#0b0b0b" font-family="Source Sans 3, sans-serif">${header}${chart}${caption}</g></svg>`;
@@ -140,10 +144,10 @@ function route(){
 }
 async function init(){
  try{
-  const wr=await fetch('data/wording.json?v=packages-comparison-2', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=packages-comparison-2', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
-  const response=await fetch('data/research.json?v=packages-comparison-2', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
+  const wr=await fetch('data/wording.json?v=october-2026-1', {cache:'no-cache'});if(!wr.ok)throw new Error('Wording HTTP '+wr.status);wording=await wr.json();const mr=await fetch('data/more-charts.json?v=october-2026-1', {cache:'no-cache'});if(!mr.ok)throw new Error('Chart data HTTP '+mr.status);moreCharts=await mr.json();wordingIndex=indexWording([...wording.items,...moreCharts.wording]);
+  const response=await fetch('data/research.json?v=october-2026-1', {cache:'no-cache'});if(!response.ok)throw new Error('HTTP '+response.status);data=await response.json();source=Object.fromEntries(data.sources.map(s=>[s.id,s]));polls=Object.fromEntries(data.polls.map(p=>[p.id,p]));
   $('updated').textContent='Зріз даних: '+data.as_of.split('-').reverse().join('.');
-  const pr=await fetch('data/kiis-packages.json?v=packages-comparison-2',{cache:'no-cache'});if(!pr.ok)throw new Error('Packages HTTP '+pr.status);packages=await pr.json();allPackages=packageRows(packages,data,wordingIndex);
+  const pr=await fetch('data/kiis-packages.json?v=october-2026-1',{cache:'no-cache'});if(!pr.ok)throw new Error('Packages HTTP '+pr.status);packages=await pr.json();allPackages=packageRows(packages,data,wordingIndex);
   $('package-wave-filter').innerHTML=option('','Усі дати')+[...new Map(allPackages.map(r=>[r.p.id,r.p])).values()].map(p=>option(p.id,p.period)).join('');
   $('package-wave-filter').onchange=renderPackages;$('package-search').oninput=renderPackages;
   $('package-sort').onchange=renderPackages;
