@@ -33,3 +33,73 @@
 @media(max-width:700px){.package-comparison{padding-right:6px}.package-comparison-legend{font-size:12px;gap:10px 16px}.package-comparison-axis{display:block}.package-comparison-axis>span{display:none}.package-comparison-row{grid-template-columns:1fr;gap:9px;padding:15px 0}.package-label{font-size:14px}.package-stacked-bar{height:32px}.package-segment{font-size:11px}.package-comparison>figcaption{font-size:20px}.package-verbatim{font-size:15px}.package-exact-values{font-size:13px}}
 
 .package-wording .record-links{display:flex;gap:12px 20px;flex-wrap:wrap;margin-top:14px;font-size:13px}
+
+/* The overview keeps the latest readings and several trends in the same view. */
+.masthead{min-height:64px}
+.intro{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:52px;padding:25px 0 23px;align-items:center}
+.intro .eyebrow{margin-bottom:10px}
+.intro h1{font-size:clamp(29px,2.8vw,40px);line-height:1.18}
+.intro-side{padding-top:0;max-width:470px}
+.intro-side>p:first-child{font-size:15px;line-height:1.45;color:var(--secondary)}
+.stats{gap:20px;margin-top:14px;flex-wrap:wrap}
+.stats>div{display:flex;gap:5px;align-items:baseline}
+.stats strong{display:inline;font:600 15px/1.3 var(--sans)}
+.stats span{font-size:12px}
+.nav a{padding:12px 0 10px}
+#view-overview{padding-top:24px}
+.overview-heading{display:flex;align-items:baseline;justify-content:space-between;gap:14px 28px;margin-bottom:15px}
+.overview-heading h2{font-size:24px;flex-shrink:0;letter-spacing:-.3px}
+.overview-heading p{font-size:13px;color:var(--secondary);max-width:650px}
+.overview-heading>a{font-size:14px;white-space:nowrap}
+.indicator-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line)}
+.indicator-card{display:flex;flex-direction:column;min-width:0;padding:19px 23px 17px 0}
+.indicator-card+.indicator-card{border-left:1px solid var(--line);padding-left:23px}
+.indicator-topline{display:flex;justify-content:space-between;gap:7px 12px;flex-wrap:wrap;color:var(--secondary);font-size:11px;line-height:1.45;margin-bottom:10px}
+.indicator-label{font:600 15px/1.35 var(--sans);min-height:41px;max-width:27ch}
+.indicator-value{font:500 43px/1.15 var(--serif);font-variant-numeric:lining-nums tabular-nums;letter-spacing:-1px;margin:9px 0 4px}
+.indicator-change{display:inline-block;font:600 14px/1.5 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:0;margin:0}
+.indicator-comparison{font-size:12px;line-height:1.4;color:var(--secondary);margin-top:5px}
+.indicator-answer{font-size:12px;line-height:1.45;margin-top:12px;color:var(--secondary)}
+.indicator-answer summary{cursor:pointer;text-underline-offset:3px}
+.indicator-answer[open] summary{margin-bottom:9px}
+.indicator-answer p+p{margin-top:8px}
+.indicator-link{display:inline-block;font-size:12px;margin-top:auto;padding-top:12px;align-self:flex-start}
+.overview-trends-heading{margin-top:34px;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:0}
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:42px;row-gap:0}
+.overview-card{min-width:0;padding:23px 0 25px;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.overview-card .chart-meta{font-size:11px;letter-spacing:.3px;align-items:start;margin-bottom:9px}
+.overview-title{font-size:24px;line-height:1.3;letter-spacing:-.3px;margin-bottom:12px}
+.overview-question{font-size:13px;line-height:1.5;color:var(--secondary);margin-top:5px;margin-bottom:12px}
+.overview-question summary,.overview-note summary{cursor:pointer;font-weight:500}
+.overview-question[open] summary,.overview-note[open] summary{margin-bottom:9px}
+.overview-question .verbatim,.overview-question p{font-size:13px;line-height:1.5}
+.overview-legend{display:grid;gap:8px;margin:0 0 9px;font-size:12px;line-height:1.4}
+.overview-legend-item{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:8px;align-items:start;min-width:0}
+.overview-legend-item .legend-mark{margin-top:7px}
+.overview-answer{min-width:0;overflow-wrap:anywhere}
+.overview-legend-item strong{font-size:13px;line-height:1.4;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.overview-svg{display:block;width:100%;height:auto;min-width:0;overflow:visible}
+.overview-svg text{font-family:var(--sans);fill:var(--secondary)}
+.overview-svg .end-value{fill:var(--ink);font-weight:600}
+.overview-svg circle[tabindex]{cursor:pointer}
+.overview-readout{font-size:12px;line-height:1.45;color:var(--secondary);min-height:43px;margin:8px 0 12px}
+.overview-readout strong{font-weight:600;color:var(--ink)}
+.overview-note{border-top:1px solid var(--line);padding-top:10px;font-size:12px;line-height:1.5;color:var(--secondary);margin-top:0}
+.overview-note p+p{margin-top:8px}
+.overview-credit{font-size:10px;line-height:1.5;color:var(--secondary);margin-top:12px;overflow-wrap:anywhere}
+.overview-credit strong{font-weight:600;color:var(--ink)}
+.overview-card-link{font-size:13px;margin-top:auto;padding-top:14px;align-self:flex-start}
+@supports(grid-template-rows:subgrid){
+ .indicator-card{display:grid;grid-template-rows:subgrid;grid-row:span 7;align-items:start}
+ .indicator-label{min-height:0}
+ .indicator-link{margin-top:0}
+ .overview-card{display:grid;grid-template-rows:subgrid;grid-row:span 11;align-items:start}
+ .overview-card-link{margin-top:0}
+ .overview-legend{align-self:start}
+}
+@media(max-width:1100px){.intro{gap:30px}.indicator-card{padding-right:16px}.indicator-card+.indicator-card{padding-left:16px}.indicator-topline{display:block}.indicator-topline>*{display:block}.overview-grid{column-gap:28px}.overview-heading p{max-width:480px}.overview-title{font-size:22px}}
+@media(max-width:900px){.indicator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.indicator-card{padding:18px 22px 18px 0}.indicator-card+.indicator-card{padding-left:22px}.indicator-card:nth-child(3){border-left:0;padding-left:0}.indicator-card:nth-child(n+3){border-top:1px solid var(--line)}.indicator-topline{display:flex}.indicator-label{min-height:0}.overview-heading{align-items:start}.overview-heading p{max-width:420px}.overview-title{font-size:21px}}
+@media(max-width:700px){.masthead{min-height:57px}.intro{grid-template-columns:1fr;gap:13px;padding:20px 0}.intro h1{font-size:31px}.intro-side{max-width:none}.intro-side>p:first-child{font-size:14px}.stats{gap:8px 18px;margin-top:10px}.stats strong{font-size:14px}.stats span{font-size:11px}.nav{gap:20px}.nav a{padding:11px 0 9px}.nav a span{font-size:14px}#view-overview{padding-top:20px}.overview-heading{flex-direction:column;gap:8px}.overview-heading h2{font-size:23px}.overview-heading p{max-width:none;font-size:12px}.indicator-card{padding-right:15px}.indicator-card+.indicator-card{padding-left:15px}.indicator-card:nth-child(3){padding-left:0}.indicator-label{font-size:14px}.indicator-topline{display:block;font-size:10px}.indicator-value{font-size:38px}.indicator-change{font-size:13px}.indicator-comparison{font-size:11px}.indicator-answer{font-size:11px}.overview-trends-heading{flex-direction:row;align-items:baseline;margin-top:28px}.overview-trends-heading h2{font-size:22px}.overview-heading>a{font-size:12px}.overview-grid{grid-template-columns:1fr}.overview-title{font-size:23px}.overview-card{padding-top:20px}.overview-card .chart-meta{font-size:11px}.overview-legend{font-size:12px}.overview-readout{min-height:0}.overview-credit{font-size:10px}}
+@media(max-width:390px){.intro h1{font-size:28px}.masthead .brand{font-size:10px;letter-spacing:1.4px}.indicator-grid{grid-template-columns:1fr}.indicator-card,.indicator-card+.indicator-card{border-left:0;padding:16px 0}.indicator-card+.indicator-card{border-top:1px solid var(--line)}.indicator-topline{display:flex;font-size:11px}.indicator-label{max-width:none}.indicator-value{font-size:40px}.indicator-answer{font-size:12px}.indicator-comparison{font-size:12px}.overview-trends-heading{flex-wrap:wrap;gap:8px}.overview-trends-heading h2{font-size:21px}.overview-title{font-size:22px}}
+@media(max-width:700px){.overview-card{display:flex;grid-row:auto;grid-template-rows:none}.overview-card-link{margin-top:auto}}
+@media(max-width:390px){.indicator-card{display:flex;grid-row:auto;grid-template-rows:none}.indicator-link{margin-top:auto}}

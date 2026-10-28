@@ -4,6 +4,7 @@ import {indexWording,wordingKey,answerText,questionText,basisLabel} from './word
 import {packageRows,packagesHTML,packageCSVRows,packageAcceptance} from './packages.js?v=october-2026-1';
 import {questionChartsHTML,questionChartRows} from './question-charts.js';
 import {questionContentHTML,scenarioHTML,experimentHTML} from './question-content.js';
+import {renderOverview} from './overview.js?v=overview-2026-1';
 const $=id=>document.getElementById(id);
 const COLORS=['#2a78d6','#eb6834','#52514e','#0d366b','#898781','#5598e7','#ab542d','#496179','#1c5cab','#d95926','#3d4852'];
 const DASH=['','7 3','2 3','10 3 2 3','4 4','1 3','12 3','8 3 1 3'];
@@ -11,6 +12,8 @@ const TEXT={uk:{credit:'Графік: Valentyn Hatsko, TG: @gorbach_squad.',repo
 const T=TEXT.uk;
 let data,source,polls,wording,wordingIndex,moreCharts,selected=SERIES[0].id,currentRows=[],catalogRows=[];
 let packages,allPackages=[],visiblePackages=[];
+let overviewRendered=false;
+let focusNextRoute=false;
 function sourceLink(id,label='Джерело ↗'){
  const url=source[id]?.url;return url&&/^https?:\/\//.test(url)?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`:'';
 }
@@ -51,13 +54,16 @@ function renderSeriesList(){
  $('series-list').innerHTML=list.map(s=>`<button class="series-option" data-series="${s.id}" aria-pressed="${s.id===selected}">${esc(s.name)}<span>${esc(s.org)}</span></button>`).join('')||'<p class="empty">Нічого не знайдено.</p>';
  $('series-list').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=b.dataset.series;history.replaceState(null,'','#trends?series='+selected);renderTrend();renderSeriesList();});
 }
-function chartSVG(meta,rs){
+function chartSVG(meta,rs,{compact=false,width:availableWidth}={}){
  const ws=waves(rs),answers=meta.order||unique(rs.map(r=>r.answer));
- const width=840,height=425,left=45,right=770,top=36,bottom=365;
+ const width=compact?Math.max(260,Math.round(availableWidth||560)):840;
+ const height=compact?Math.max(230,Math.min(300,Math.round(width*.52))):425;
+ const left=compact?36:45,right=width-(compact?54:70),top=compact?20:36,bottom=height-(compact?35:60);
+ const chartId=compact?'overview-'+meta.id:'trend-chart';
  const min=ws[0].time,max=ws.at(-1).time;
  const x=t=>left+(t-min)/(max-min||1)*(right-left),y=v=>bottom-v*(bottom-top);
  const pointX=r=>{const same=ws.filter(w=>w.time===r.time),i=same.findIndex(w=>w.poll===r.poll&&w.sort===r.sort);return x(r.time)+(i-(same.length-1)/2)*8;};
- let svg=`<svg id="trend-chart" class="chart-svg" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg-title svg-desc"><title id="svg-title">${esc(meta.title)}</title><desc id="svg-desc">${esc(questionText(wordingFor(meta.id,ws.at(-1).poll)))} ${esc(meta.note)} Точні значення доступні на точках графіка та у CSV.</desc><g font-family="Source Sans 3, sans-serif" font-size="12" fill="#52514e">`;
+ let svg=`<svg id="${chartId}" class="${compact?'overview-svg':'chart-svg'}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="${chartId}-title ${chartId}-desc"><title id="${chartId}-title">${esc(compact?meta.name:meta.title)}</title><desc id="${chartId}-desc">${esc(questionText(wordingFor(meta.id,ws.at(-1).poll)))} ${esc(meta.note)} Точні значення доступні на точках графіка та у CSV.</desc><g font-family="Source Sans 3, sans-serif" font-size="12" fill="#52514e">`;
  for(let v=0;v<=1.001;v+=.25){svg+=`<line x1="${left}" x2="${right}" y1="${y(v)}" y2="${y(v)}" stroke="#e1e0d9" stroke-width=".7"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`;}
  const span=max-min;
  const sameMonth=unique(ws.map(w=>w.sort.slice(0,7))).length===1&&ws.every(w=>w.sort.length===10);
@@ -134,13 +140,20 @@ function renderPackages(){
  });
 }
 function route(){
- const [raw,query='']=location.hash.slice(1).split('?'),view=['trends','conditions','packages','catalog','methods'].includes(raw)?raw:'trends';const params=new URLSearchParams(query);
+ const [raw,query='']=location.hash.slice(1).split('?'),view=['overview','trends','conditions','packages','catalog','methods'].includes(raw)?raw:'overview';const params=new URLSearchParams(query);
  document.querySelectorAll('section[id^="view-"]').forEach(s=>s.hidden=s.id!=='view-'+view);
  document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ if(view==='overview'&&!overviewRendered){renderOverview($('view-overview'),{data,series:SERIES,wordingIndex,drawChart:chartSVG,sourceLink,field,credit:T});overviewRendered=true;}
  if(view==='trends'){if(SERIES.some(s=>s.id===params.get('series')))selected=params.get('series');renderSeriesList();renderTrend();}
  if(view==='conditions'){if(params.has('poll')){$('question-search').value=params.get('poll');$('question-priority').value='all';$('dimension-filter').value='';}renderQuestions();}
  if(view==='catalog'){if(params.has('poll')){$('catalog-search').value=params.get('poll');$('year-filter').value='';$('priority-filter').value='all';}renderCatalog();}
  if(view==='packages'){if(params.has('poll'))$('package-wave-filter').value=params.get('poll');renderPackages();}
+ if(focusNextRoute){
+  const destination=$('view-'+view),heading=destination.querySelector('h2');
+  destination.scrollIntoView({block:'start'});
+  if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
+  focusNextRoute=false;
+ }
 }
 async function init(){
  try{
@@ -162,6 +175,14 @@ async function init(){
   ['question-search','dimension-filter','question-priority'].forEach(id=>$(id).addEventListener(id.includes('search')?'input':'change',renderQuestions));
   ['catalog-search','year-filter','priority-filter'].forEach(id=>$(id).addEventListener(id.includes('search')?'input':'change',renderCatalog));
   $('catalog-csv').onclick=()=>download('poll-catalog.csv',csv(withURLs(catalogRows)));
+  document.addEventListener('click',event=>{
+   if(event.button||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+   const href=event.target.closest('a')?.getAttribute('href');
+   if(href&&/^#(overview|trends|conditions|packages|catalog|methods)(\?|$)/.test(href)){
+    focusNextRoute=true;
+    if(href===location.hash)route();
+   }
+  });
   window.addEventListener('hashchange',route);
  }catch(error){$('status').innerHTML='Не вдалося завантажити дані. Спробуйте оновити сторінку або <a href="data/dynamics.csv">завантажте CSV</a>.';console.error(error);}
 }
